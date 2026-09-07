@@ -1,0 +1,203 @@
+.technicians-page {
+  padding:30px;
+  max-width:1280px;
+  margin:0 auto
+}
+.technicians-heading {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:18px
+}
+.technicians-heading h1 {
+  font-size:26px;
+  color:#0f1c2e;
+  margin:0 0 6px;
+  font-weight:700
+}
+.technicians-heading p {
+  margin:0;
+  color:#64748b
+}
+.breadcrumb {
+  font-size:13px;
+  margin-bottom:7px!important;
+  color:#2563eb!important
+}
+.technician-legend {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  border-radius:10px;
+  padding:10px 14px;
+  color:#1e40af;
+  font-size:13px;
+  margin-bottom:18px
+}
+.week {
+  font-weight:600
+}
+.technician-list {
+  display:grid;
+  gap:14px
+}
+.technician-card {
+  background:#fff;
+  border:1px solid #e2e8f0;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:box-shadow .22s ease,border-color .22s ease,transform .22s ease
+}
+.technician-card:hover,.technician-card.expanded {
+  border-color:#93c5fd;
+  box-shadow:0 10px 24px rgba(37,99,235,.12);
+  transform:translateY(-2px)
+}
+.tech-profile {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 20px;
+  border-bottom:1px solid #f1f5f9
+}
+.tech-profile img {
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  object-fit:cover;
+  border:3px solid #dbeafe
+}
+.tech-profile h2 {
+  font-size:16px;
+  margin:0 0 5px;
+  color:#0f172a
+}
+.tech-profile p {
+  font-size:13px;
+  color:#64748b;
+  margin:0
+}
+.tech-profile button {
+  margin-left:auto;
+  border:0;
+  background:#eff6ff;
+  color:#2563eb;
+  width:34px;
+  height:34px;
+  border-radius:8px
+}
+.tech-summary {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  padding:8px 20px
+}
+.tech-metric {
+  padding:15px 16px;
+  border-right:1px solid #e2e8f0
+}
+.tech-metric:last-child {
+  border-right:0
+}
+.tech-metric span,.tech-metric small {
+  display:block;
+  color:#64748b;
+  font-size:12px
+}
+.tech-metric strong {
+  display:block;
+  font-size:23px;
+  color:#0f172a;
+  margin:4px 0
+}
+.tech-metric.good strong {
+  color:#15803d
+}
+.tech-metric.warning strong {
+  color:#b45309
+}
+.tech-metric.danger strong {
+  color:#dc2626
+}
+.tech-detail {
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transition:max-height .3s ease,opacity .2s ease;
+  padding:0 20px
+}
+.expanded .tech-detail {
+  max-height:160px;
+  opacity:1;
+  padding:16px 20px;
+  border-top:1px solid #e2e8f0
+}
+.detail-row {
+  display:grid;
+  grid-template-columns:170px 1fr auto;
+  align-items:center;
+  gap:14px;
+  font-size:13px;
+  color:#475569;
+  margin-bottom:12px
+}
+.detail-row .progress {
+  height:8px;
+  background:#e2e8f0;
+  border-radius:8px;
+  overflow:hidden
+}
+.detail-row .progress-bar {
+  height:100%;
+  background:#2563eb;
+  border-radius:8px
+}
+.improving {
+  color:#15803d
+}
+.worsening {
+  color:#dc2626
+}
+.tech-help {
+  font-size:12px;
+  color:#64748b;
+  margin:0
+}
+@media(max-width:700px) {
+  .technicians-page {
+    padding:20px 14px
+  }
+  .technicians-heading {
+    display:block
+  }
+  .technicians-heading .btn {
+    margin-top:14px
+  }
+  .technician-legend {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .tech-summary {
+    grid-template-columns:1fr;
+    padding:0 20px
+  }
+  .tech-metric {
+    border-right:0;
+    border-bottom:1px solid #e2e8f0;
+    padding:12px 0
+  }
+  .tech-metric:last-child {
+    border-bottom:0
+  }
+  .detail-row {
+    grid-template-columns:1fr;
+    gap:6px
+  }
+  .expanded .tech-detail {
+    max-height:250px
+  }
+}

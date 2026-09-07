@@ -1,0 +1,138 @@
+.shell {
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:270px 1fr
+}
+.sidebar {
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+  background:#102a43;
+  color:#dbeafe;
+  padding:17px 12px
+}
+.side-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:0 6px 26px
+}
+.logo {
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:42px;
+  border-radius:10px;
+  background:#2563eb;
+  color:#fff;
+  font-weight:800;
+  font-size:18px
+}
+.side-head button,.menu-mobile {
+  border:0;
+  background:transparent;
+  color:inherit;
+  font-size:20px;
+  cursor:pointer
+}
+.sidebar h2 {
+  margin:22px 10px 7px;
+  color:#92a9c1;
+  font-size:10px;
+  letter-spacing:.09em;
+  text-transform:uppercase
+}
+.sidebar nav a {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px
+}
+.sidebar nav a:hover,.sidebar nav a.active {
+  background:#1d4f7b;
+  color:#fff
+}
+.dot {
+  width:6px;
+  height:6px;
+  border-radius:99px;
+  background:#60a5fa
+}
+.workspace {
+  min-width:0
+}
+.topbar {
+  height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 30px;
+  background:#fff;
+  border-bottom:1px solid #e2e8f0
+}
+.topbar div {
+  display:flex;
+  gap:9px;
+  align-items:center
+}
+.topbar span {
+  color:#64748b;
+  font-size:13px
+}
+.avatar {
+  display:grid!important;
+  place-items:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#dbeafe;
+  color:#1d4ed8!important;
+  font-weight:800
+}
+.menu-mobile {
+  display:none;
+  color:#102a43
+}
+.content {
+  max-width:1500px;
+  padding:34px;
+  margin:auto
+}
+.is-collapsed {
+  grid-template-columns:76px 1fr
+}
+.is-collapsed .sidebar h2,.is-collapsed .sidebar nav a span:not(.dot) {
+  display:none
+}
+.is-collapsed .sidebar nav a {
+  justify-content:center
+}
+@media(max-width:760px) {
+  .shell {
+    grid-template-columns:1fr
+  }
+  .sidebar {
+    display:none
+  }
+  .is-collapsed .sidebar {
+    display:block;
+    position:fixed;
+    z-index:5;
+    width:270px
+  }
+  .topbar {
+    padding:0 16px
+  }
+  .menu-mobile {
+    display:block
+  }
+  .topbar>div:first-of-type span {
+    display:none
+  }
+  .content {
+    padding:22px 16px
+  }
+}
