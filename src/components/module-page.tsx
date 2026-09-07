@@ -1,6 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
 import type { RouteDefinition } from "@/lib/routes";
+import { TechnicalQueue } from "@/components/technical-queue";
+import { OrderDetail } from "@/components/order-detail";
 import "./module-page.css";
 
 const columns = ["Código", "Descripción", "Estado", "Actualizado"];
@@ -10,7 +12,10 @@ export function ModulePage({ info, route }: { info: RouteDefinition; route: stri
   const [search, setSearch] = useState("");
   const path = useMemo(() => route.split("/").join(" › "), [route]);
   const isForm = info.kind === "form";
-  return <><div className="page-heading"><div><p className="breadcrumb">Inicio › {path}</p><h1>{info.title}</h1><p>Administración de {info.group.toLowerCase()}.</p></div><button className="primary">{isForm ? "Guardar" : info.kind === "report" ? "Exportar" : "Nuevo registro"}</button></div>{route === "dashboard" ? <Dashboard /> : isForm ? <EntryForm title={info.title} /> : <ListView query={search} onQuery={setSearch} report={info.kind === "report"} />}</>;
+  const technicalQueue = route === "operaciones/ordenes-disponibles";
+  const assignedOrders = route === "operaciones/mis-ordenes";
+  const orderId = route.match(/^operaciones\/ordenes\/([0-9a-f-]{36})$/i)?.[1];
+  return <><div className="page-heading"><div><p className="breadcrumb">Inicio › {path}</p><h1>{orderId ? "Detalle de orden" : info.title}</h1><p>Administración de {info.group.toLowerCase()}.</p></div>{!technicalQueue && !assignedOrders && !orderId && <button className="primary">{isForm ? "Guardar" : info.kind === "report" ? "Exportar" : "Nuevo registro"}</button>}</div>{orderId ? <OrderDetail orderId={orderId} /> : technicalQueue ? <TechnicalQueue /> : assignedOrders ? <TechnicalQueue assigned /> : route === "dashboard" ? <Dashboard /> : isForm ? <EntryForm title={info.title} /> : <ListView query={search} onQuery={setSearch} report={info.kind === "report"} />}</>;
 }
 function Dashboard() { return <><section className="metrics"><Metric title="Órdenes activas" value="—" /><Metric title="Tickets pendientes" value="—" /><Metric title="Facturación del mes" value="—" /><Metric title="Informes emitidos" value="—" /></section><section className="panel empty"><h2>Resumen operativo</h2><p>Conecta <code>NEXT_PUBLIC_API_URL</code> para mostrar los indicadores reales que Laravel entrega al dashboard.</p></section></>; }
 function Metric({ title, value }: { title: string; value: string }) { return <article className="metric"><span>{title}</span><strong>{value}</strong><small>Datos desde Laravel</small></article>; }

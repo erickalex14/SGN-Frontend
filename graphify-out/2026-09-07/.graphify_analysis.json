@@ -1,0 +1,256 @@
+{
+  "communities": {
+    "0": [
+      "babel_plugin_react_compiler",
+      "eslint",
+      "eslint_config_next",
+      "package_devdependencies",
+      "package_devdependencies_babel_plugin_react_compiler",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_next",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript"
+    ],
+    "1": [
+      "src_app_workspace_segments_page",
+      "src_app_workspace_segments_page_catchallpage",
+      "src_components_module_page",
+      "src_components_module_page_columns",
+      "src_components_module_page_dashboard",
+      "src_components_module_page_demorows",
+      "src_components_module_page_entryform",
+      "src_components_module_page_listview",
+      "src_components_module_page_metric",
+      "src_components_module_page_modulepage",
+      "src_lib_routes",
+      "src_lib_routes_pageinfo",
+      "src_lib_routes_pagekind",
+      "src_lib_routes_routedefinition",
+      "src_lib_routes_routedefinitions"
+    ],
+    "2": [
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "3": [
+      "ref_mts",
+      "ref_next_dev_types_ts",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "4": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version"
+    ],
+    "5": [
+      "src_app_workspace_tecnicos_page",
+      "src_app_workspace_tecnicos_page_filterstate",
+      "src_app_workspace_tecnicos_page_initialfilters",
+      "src_app_workspace_tecnicos_page_metric",
+      "src_app_workspace_tecnicos_page_technician",
+      "src_app_workspace_tecnicos_page_techniciancard",
+      "src_app_workspace_tecnicos_page_technicians",
+      "src_app_workspace_tecnicos_page_techniciansprototype"
+    ],
+    "6": [
+      "next",
+      "package_dependencies",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_json_react",
+      "react_dom"
+    ],
+    "7": [
+      "src_app_workspace_layout",
+      "src_app_workspace_layout_workspacelayout",
+      "src_components_app_shell",
+      "src_components_app_shell_appshell",
+      "src_components_app_shell_group",
+      "src_components_app_shell_groups",
+      "src_components_app_shell_item"
+    ],
+    "8": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions_lib"
+    ],
+    "9": [
+      "src_app_layout",
+      "src_app_layout_metadata",
+      "src_app_layout_rootlayout"
+    ],
+    "10": [
+      "src_lib_api",
+      "src_lib_api_api",
+      "src_lib_api_apiurl"
+    ],
+    "11": [
+      "eslint_config",
+      "eslint_config_eslintconfig"
+    ],
+    "12": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "13": [
+      "src_app_login_page",
+      "src_app_login_page_loginpage"
+    ],
+    "14": [
+      "src_app_page",
+      "src_app_page_home"
+    ],
+    "15": [
+      "react_react"
+    ]
+  },
+  "cohesion": {
+    "0": 0.13333333333333333,
+    "1": 0.18095238095238095,
+    "2": 0.13333333333333333,
+    "3": 0.2,
+    "4": 0.2222222222222222,
+    "5": 0.25,
+    "6": 0.2857142857142857,
+    "7": 0.3333333333333333,
+    "8": 0.5,
+    "9": 0.6666666666666666,
+    "10": 0.6666666666666666,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 7
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "src_lib_routes_pageinfo",
+      "label": "pageInfo()",
+      "degree": 3
+    },
+    {
+      "id": "src_lib_routes_routedefinition",
+      "label": "RouteDefinition",
+      "degree": 2
+    },
+    {
+      "id": "src_app_workspace_segments_page_catchallpage",
+      "label": "CatchAllPage()",
+      "degree": 2
+    },
+    {
+      "id": "src_components_module_page_modulepage",
+      "label": "ModulePage()",
+      "degree": 2
+    },
+    {
+      "id": "src_components_app_shell_appshell",
+      "label": "AppShell()",
+      "degree": 2
+    },
+    {
+      "id": "package_devdependencies_babel_plugin_react_compiler",
+      "label": "babel-plugin-react-compiler",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "CatchAllPage()",
+      "target": "pageInfo()",
+      "source_files": [
+        "src/app/(workspace)/[...segments]/page.tsx",
+        "src/lib/routes.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `compilerOptions` to `lib`, `include`?",
+      "why": "High betweenness centrality (0.061) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `devDependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.058) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `PageKind`, `FilterState`, `Technician` to the rest of the system?",
+      "why": "56 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `devDependencies` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `compilerOptions` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

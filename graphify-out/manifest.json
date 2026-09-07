@@ -1,0 +1,182 @@
+{
+  "eslint.config.mjs": {
+    "mtime": 1788819543.4710832,
+    "ast_hash": "6c4307ffa009658f5c97f5629094c0c2",
+    "semantic_hash": "6c4307ffa009658f5c97f5629094c0c2"
+  },
+  "next.config.ts": {
+    "mtime": 1788819543.4722154,
+    "ast_hash": "898ffcde50df85425a1e21b333612c90",
+    "semantic_hash": "898ffcde50df85425a1e21b333612c90"
+  },
+  "package.json": {
+    "mtime": 1788819543.4742575,
+    "ast_hash": "3b8261d3a7f2ace029b0debc9d7c304d",
+    "semantic_hash": "3b8261d3a7f2ace029b0debc9d7c304d"
+  },
+  "src/app/(workspace)/[...segments]/page.tsx": {
+    "mtime": 1788819543.487276,
+    "ast_hash": "b6a9774ec79d200fc8c6914029a06cf5",
+    "semantic_hash": "b6a9774ec79d200fc8c6914029a06cf5"
+  },
+  "src/app/(workspace)/layout.tsx": {
+    "mtime": 1788819543.487276,
+    "ast_hash": "c8cd0629732b1e2e122146b0630422d7",
+    "semantic_hash": "c8cd0629732b1e2e122146b0630422d7"
+  },
+  "src/app/(workspace)/tecnicos/page.tsx": {
+    "mtime": 1788819543.488329,
+    "ast_hash": "4c4f8105e053a090780a94c4fcd21c4c",
+    "semantic_hash": "4c4f8105e053a090780a94c4fcd21c4c"
+  },
+  "src/app/layout.tsx": {
+    "mtime": 1788819543.489372,
+    "ast_hash": "029b346363f9f948b092803845e9647c",
+    "semantic_hash": "029b346363f9f948b092803845e9647c"
+  },
+  "src/app/login/page.tsx": {
+    "mtime": 1788820080.0627165,
+    "ast_hash": "909031dfc1d00f1812028aaa77bdd065",
+    "semantic_hash": ""
+  },
+  "src/app/page.tsx": {
+    "mtime": 1788819543.4926815,
+    "ast_hash": "0ce9079877d17a3564fad10d69714bb3",
+    "semantic_hash": "0ce9079877d17a3564fad10d69714bb3"
+  },
+  "src/components/app-shell.tsx": {
+    "mtime": 1788820237.972839,
+    "ast_hash": "abc8769015f3c90ab871de4bec929955",
+    "semantic_hash": ""
+  },
+  "src/components/module-page.tsx": {
+    "mtime": 1788820379.6441052,
+    "ast_hash": "2ee39391502a7d7c606b6c03c7708d0a",
+    "semantic_hash": ""
+  },
+  "src/lib/api.ts": {
+    "mtime": 1788820021.9651241,
+    "ast_hash": "1c8fe0feab5cc9d8f8e17749b01d7f16",
+    "semantic_hash": ""
+  },
+  "src/lib/routes.ts": {
+    "mtime": 1788820236.3477366,
+    "ast_hash": "7baf25d44d50d8bf92d6d8c66956affc",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1788819543.4958656,
+    "ast_hash": "0a2f4ed9289b65cd3feb4fb4ab3a4fcd",
+    "semantic_hash": "0a2f4ed9289b65cd3feb4fb4ab3a4fcd"
+  },
+  "src/lib/session.ts": {
+    "mtime": 1788820020.84049,
+    "ast_hash": "c1454c5cee0b4b4f37c0a26d83a83f19",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1788819543.470083,
+    "ast_hash": "3ad29ed1c7e1970f724e872fcffc4909",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1788819543.470083,
+    "ast_hash": "771faa62feb60b7de901a397aebb29b0",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788819543.4710832,
+    "ast_hash": "6005f372650871b991c5cdbb0048c4f0",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip.md": {
+    "mtime": 1788819739.4014773,
+    "ast_hash": "721c5539ca6e201aeebb579fd89ecb65",
+    "semantic_hash": ""
+  },
+  "pnpm-workspace.yaml": {
+    "mtime": 1788819543.4762776,
+    "ast_hash": "264e8737aaefbd712e39ed6ffd5bfc1b",
+    "semantic_hash": ""
+  },
+  "fotos/tecnico 1.jpg": {
+    "mtime": 1788819543.4722154,
+    "ast_hash": "fc39b3cfea47cf247a001c7d50f1226d",
+    "semantic_hash": ""
+  },
+  "public/Novitecpdf.png": {
+    "mtime": 1788819543.4772775,
+    "ast_hash": "eb8b1217cf4f1d09a11e21f7c46c54c0",
+    "semantic_hash": ""
+  },
+  "public/SGN.png": {
+    "mtime": 1788819543.4782782,
+    "ast_hash": "e948dea6ebc310eed7ca411f01238b00",
+    "semantic_hash": ""
+  },
+  "public/SGN1.png": {
+    "mtime": 1788819543.481276,
+    "ast_hash": "9a6cc5778d62000766beb5bff15c6310",
+    "semantic_hash": ""
+  },
+  "public/SGNI.png": {
+    "mtime": 1788819543.4822767,
+    "ast_hash": "c9952321ed7c9fc08c0b167f1e1616c6",
+    "semantic_hash": ""
+  },
+  "public/file.svg": {
+    "mtime": 1788819543.4822767,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "public/globe.svg": {
+    "mtime": 1788819543.4832776,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "public/logosgn1.png": {
+    "mtime": 1788819543.4842772,
+    "ast_hash": "0aabf056c0f1938d542be9d249e95b3f",
+    "semantic_hash": ""
+  },
+  "public/next.svg": {
+    "mtime": 1788819543.4842772,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "public/vercel.svg": {
+    "mtime": 1788819543.4852767,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "public/window.svg": {
+    "mtime": 1788819543.4852767,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260907_222741_empecemos_a_trabajar_en_el_front.md": {
+    "mtime": 1788820061.9070117,
+    "ast_hash": "a690aff4aea2b2a84fdd1f119646c9d9",
+    "semantic_hash": ""
+  },
+  "src/components/technical-queue.tsx": {
+    "mtime": 1788820378.3056417,
+    "ast_hash": "9bbe8203fe1cb915ae156225f672b806",
+    "semantic_hash": ""
+  },
+  "src/components/order-detail.tsx": {
+    "mtime": 1788820581.375156,
+    "ast_hash": "36913def2e3b1f79dafcb2122a994698",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260907_223105_empecemos_a_trabajar_en_el_front.md": {
+    "mtime": 1788820265.5838032,
+    "ast_hash": "36050c6f8d3f7114b552834b27adb4ea",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260907_223333_siguele_rey.md": {
+    "mtime": 1788820413.0979044,
+    "ast_hash": "5fedf1a4a600d19a2d3e3b31d530bb72",
+    "semantic_hash": ""
+  }
+}
