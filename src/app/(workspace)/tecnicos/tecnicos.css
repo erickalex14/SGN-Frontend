@@ -1,203 +1,599 @@
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
 .technicians-page {
-  padding:30px;
-  max-width:1280px;
-  margin:0 auto
+  padding: 30px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
 .technicians-heading {
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:18px;
-  margin-bottom:18px
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
 }
+
 .technicians-heading h1 {
-  font-size:26px;
-  color:#0f1c2e;
-  margin:0 0 6px;
-  font-weight:700
+  font-size: 26px;
+  color: #0f1c2e;
+  margin: 0 0 6px;
+  font-weight: 700;
 }
+
 .technicians-heading p {
-  margin:0;
-  color:#64748b
+  margin: 0;
+  color: #64748b;
 }
+
 .breadcrumb {
-  font-size:13px;
-  margin-bottom:7px!important;
-  color:#2563eb!important
+  font-size: 13px;
+  margin-bottom: 7px !important;
+  color: #2563eb !important;
 }
+
+
+/* ================================
+   LEYENDA
+================================ */
+
 .technician-legend {
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  align-items:center;
-  background:#eff6ff;
-  border:1px solid #bfdbfe;
-  border-radius:10px;
-  padding:10px 14px;
-  color:#1e40af;
-  font-size:13px;
-  margin-bottom:18px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+
+  padding: 10px 14px;
+
+  color: #1e40af;
+  font-size: 13px;
+
+  margin-bottom: 16px;
 }
+
+.technician-legend i {
+  margin-right: 6px;
+}
+
 .week {
-  font-weight:600
+  font-weight: 600;
 }
+
+
+/* ================================
+   LISTA
+================================ */
+
 .technician-list {
-  display:grid;
-  gap:14px
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+
+/* ================================
+   TARJETA PRINCIPAL
+================================ */
+
 .technician-card {
-  background:#fff;
-  border:1px solid #e2e8f0;
-  border-radius:14px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:box-shadow .22s ease,border-color .22s ease,transform .22s ease
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 250px 1fr 36px;
+  align-items: center;
+
+  min-height: 105px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
-.technician-card:hover,.technician-card.expanded {
-  border-color:#93c5fd;
-  box-shadow:0 10px 24px rgba(37,99,235,.12);
-  transform:translateY(-2px)
+
+.technician-card:hover,
+.technician-card.expanded {
+  border-color: #93c5fd;
+
+  box-shadow:
+    0 10px 28px rgba(37, 99, 235, 0.12);
+
+  transform: translateY(-2px);
 }
+
+
+/* ================================
+   PERFIL
+================================ */
+
 .tech-profile {
-  display:flex;
-  align-items:center;
-  gap:14px;
-  padding:16px 20px;
-  border-bottom:1px solid #f1f5f9
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 18px;
 }
-.tech-profile img {
-  width:64px;
-  height:64px;
-  border-radius:12px;
-  object-fit:cover;
-  border:3px solid #dbeafe
+
+
+/* ================================
+   FOTO
+================================ */
+
+.tech-photo {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+
+  border: 2px solid #dbeafe;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-.tech-profile h2 {
-  font-size:16px;
-  margin:0 0 5px;
-  color:#0f172a
+
+.technician-card:hover .tech-photo {
+  transform: scale(1.08) rotate(1deg);
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.18);
 }
-.tech-profile p {
-  font-size:13px;
-  color:#64748b;
-  margin:0
+
+.tech-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
-.tech-profile button {
-  margin-left:auto;
-  border:0;
-  background:#eff6ff;
-  color:#2563eb;
-  width:34px;
-  height:34px;
-  border-radius:8px
+
+.tech-photo i {
+  font-size: 27px;
+  color: #2563eb;
 }
-.tech-summary {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  padding:8px 20px
+
+
+/* ================================
+   INFORMACIÓN DEL TÉCNICO
+================================ */
+
+.tech-info {
+  min-width: 0;
 }
+
+.tech-info h2 {
+  font-size: 15px;
+
+  margin: 0 0 5px;
+
+  color: #0f172a;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tech-info p {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* ================================
+   MÉTRICAS
+================================ */
+
+.tech-metrics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(100px, 1fr));
+
+  align-items: center;
+
+  height: 100%;
+}
+
 .tech-metric {
-  padding:15px 16px;
-  border-right:1px solid #e2e8f0
+  min-height: 66px;
+
+  padding: 10px 16px;
+
+  border-left: 1px solid #f1f5f9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.tech-metric:last-child {
-  border-right:0
+
+.tech-metric span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  margin-bottom: 3px;
 }
-.tech-metric span,.tech-metric small {
-  display:block;
-  color:#64748b;
-  font-size:12px
-}
+
 .tech-metric strong {
-  display:block;
-  font-size:23px;
-  color:#0f172a;
-  margin:4px 0
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 19px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
 }
-.tech-metric.good strong {
-  color:#15803d
+
+.tech-metric strong small {
+  font-size: 12px;
+
+  color: #94a3b8;
+
+  font-weight: 500;
 }
-.tech-metric.warning strong {
-  color:#b45309
+
+.tech-metric p {
+  margin: 3px 0 0;
+
+  font-size: 10px;
+
+  color: #94a3b8;
 }
-.tech-metric.danger strong {
-  color:#dc2626
+
+
+/* ================================
+   COLORES DE ESTADO
+================================ */
+
+.good-text {
+  color: #15803d !important;
 }
+
+.warning-text {
+  color: #b45309 !important;
+}
+
+.danger strong {
+  color: #dc2626;
+}
+
+
+/* ================================
+   BARRA DE PROGRESO
+================================ */
+
+.mini-progress {
+  width: 80px;
+
+  height: 5px;
+
+  margin-top: 6px;
+
+  background: #e2e8f0;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.mini-progress div {
+  height: 100%;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+
+  transition: width 0.5s ease;
+}
+
+
+/* ================================
+   BOTÓN DE EXPANSIÓN
+================================ */
+
+.tech-toggle {
+  width: 30px;
+  height: 30px;
+
+  margin-right: 8px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tech-toggle:hover {
+  background: #dbeafe;
+
+  transform: scale(1.05);
+}
+
+
+/* ================================
+   DETALLE OCULTO
+================================ */
+
 .tech-detail {
-  max-height:0;
-  opacity:0;
-  overflow:hidden;
-  transition:max-height .3s ease,opacity .2s ease;
-  padding:0 20px
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(248, 250, 252, 0.98);
+
+  border-top: 1px solid #e2e8f0;
+
+  transform: translateY(100%);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.25s ease;
 }
-.expanded .tech-detail {
-  max-height:160px;
-  opacity:1;
-  padding:16px 20px;
-  border-top:1px solid #e2e8f0
+
+.technician-card:hover .tech-detail,
+.technician-card.expanded .tech-detail {
+  transform: translateY(0);
+
+  opacity: 1;
+
+  pointer-events: auto;
 }
-.detail-row {
-  display:grid;
-  grid-template-columns:170px 1fr auto;
-  align-items:center;
-  gap:14px;
-  font-size:13px;
-  color:#475569;
-  margin-bottom:12px
+
+.detail-content {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  padding: 12px 18px;
 }
-.detail-row .progress {
-  height:8px;
-  background:#e2e8f0;
-  border-radius:8px;
-  overflow:hidden
+
+
+/* ================================
+   ELEMENTOS DEL DETALLE
+================================ */
+
+.detail-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  font-size: 12px;
 }
-.detail-row .progress-bar {
-  height:100%;
-  background:#2563eb;
-  border-radius:8px
+
+.detail-item span {
+  color: #64748b;
 }
+
+.detail-item span i {
+  margin-right: 5px;
+}
+
+.detail-item strong {
+  font-size: 12px;
+}
+
+
+/* ================================
+   VARIACIÓN
+================================ */
+
 .improving {
-  color:#15803d
+  color: #15803d;
 }
+
 .worsening {
-  color:#dc2626
+  color: #dc2626;
 }
+
+
+/* ================================
+   TEXTO DE AYUDA
+================================ */
+
 .tech-help {
-  font-size:12px;
-  color:#64748b;
-  margin:0
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
+
+  padding-top: 2px;
+
+  font-size: 10px;
+
+  color: #64748b;
 }
-@media(max-width:700px) {
-  .technicians-page {
-    padding:20px 14px
+
+
+/* ================================
+   BOTÓN EXPORTAR
+================================ */
+
+.btn-primary {
+  white-space: nowrap;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+  .technician-card {
+    grid-template-columns: 210px 1fr 36px;
   }
-  .technicians-heading {
-    display:block
+
+  .tech-metrics {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .technicians-heading .btn {
-    margin-top:14px
-  }
-  .technician-legend {
-    align-items:flex-start;
-    flex-direction:column
-  }
-  .tech-summary {
-    grid-template-columns:1fr;
-    padding:0 20px
-  }
+
   .tech-metric {
-    border-right:0;
-    border-bottom:1px solid #e2e8f0;
-    padding:12px 0
+    min-height: 50px;
   }
-  .tech-metric:last-child {
-    border-bottom:0
+
+}
+
+
+/* ================================
+   MÓVIL
+================================ */
+
+@media (max-width: 700px) {
+
+  .technicians-page {
+    padding: 20px 14px;
   }
-  .detail-row {
-    grid-template-columns:1fr;
-    gap:6px
+
+  .technicians-heading {
+    display: block;
   }
-  .expanded .tech-detail {
-    max-height:250px
+
+  .technicians-heading .btn {
+    margin-top: 14px;
   }
+
+  .technician-legend {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .technician-card {
+    display: grid;
+
+    grid-template-columns: 1fr 34px;
+
+    padding: 0;
+  }
+
+  .tech-profile {
+    grid-column: 1 / -1;
+
+    padding: 14px;
+  }
+
+  .tech-metrics {
+    grid-column: 1 / -1;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .tech-metric {
+    padding: 10px 14px;
+
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .tech-toggle {
+    position: absolute;
+
+    top: 15px;
+    right: 10px;
+
+    margin: 0;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+
+    padding: 12px 14px;
+  }
+
+  .tech-help {
+    grid-column: auto;
+  }
+
+}
+
+
+/* ================================
+   MÓVILES PEQUEÑOS
+================================ */
+
+@media (max-width: 450px) {
+
+  .tech-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tech-metric strong {
+    font-size: 17px;
+  }
+
+  .tech-profile {
+    padding-right: 45px;
+  }
+
 }
