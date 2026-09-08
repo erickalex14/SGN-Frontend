@@ -104,6 +104,12 @@
 .parts-list input { border:1px solid #cbd5e1; border-radius:8px; padding:10px; font:inherit }
 .simple-list { display:grid; gap:10px; margin:16px 0 0; padding-left:20px }
 .simple-list small { color:#64748b; margin-left:5px }
+.evidence-list { padding-left:0; list-style:none }
+.evidence-list li { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:11px 12px; border:1px solid #e2e8f0; border-radius:9px }
+.evidence-list li span { display:grid; min-width:0 }
+.evidence-list li small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin:3px 0 0 }
+.evidence-list button { border:1px solid #bfdbfe; border-radius:7px; background:#eff6ff; color:#1d4ed8; padding:7px 10px; font-weight:700; cursor:pointer }
+.evidence-list button:disabled { cursor:wait; opacity:.6 }
 .table-tools input,.entry-form input,.entry-form select,.entry-form textarea {
   width:100%;
   border:1px solid #cbd5e1;

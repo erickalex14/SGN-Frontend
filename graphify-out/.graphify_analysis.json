@@ -1,6 +1,122 @@
 {
   "communities": {
     "0": [
+      "src_components_order_detail",
+      "src_components_order_detail_order",
+      "src_components_order_detail_orderdetail",
+      "src_components_order_detail_partitem",
+      "src_components_order_detail_partsrequest",
+      "src_components_order_detail_quote",
+      "src_components_order_detail_workflow",
+      "src_components_technical_queue",
+      "src_components_technical_queue_classes",
+      "src_components_technical_queue_labels",
+      "src_components_technical_queue_order",
+      "src_components_technical_queue_orderlist",
+      "src_components_technical_queue_technicalqueue",
+      "src_components_ticket_create",
+      "src_components_ticket_create_branch",
+      "src_components_ticket_create_ticketcreate",
+      "src_components_ticket_detail",
+      "src_components_ticket_detail_attachment",
+      "src_components_ticket_detail_detail",
+      "src_components_ticket_detail_message",
+      "src_components_ticket_detail_statuses",
+      "src_components_ticket_detail_ticket",
+      "src_components_ticket_detail_ticketdetail",
+      "src_lib_api",
+      "src_lib_api_api",
+      "src_lib_api_apidownload",
+      "src_lib_api_apierror",
+      "src_lib_api_apierror_constructor",
+      "src_lib_api_apiurl",
+      "src_lib_session_getaccesstoken"
+    ],
+    "1": [
+      "src_app_workspace_segments_page",
+      "src_app_workspace_segments_page_catchallpage",
+      "src_components_legacy_order_search",
+      "src_components_legacy_order_search_currentorder",
+      "src_components_legacy_order_search_legacyorder",
+      "src_components_legacy_order_search_legacyordersearch",
+      "src_components_legacy_order_search_lookup",
+      "src_components_legacy_tickets",
+      "src_components_legacy_tickets_legacytickets",
+      "src_components_legacy_tickets_statuslabel",
+      "src_components_legacy_tickets_ticket",
+      "src_components_module_page",
+      "src_components_module_page_columns",
+      "src_components_module_page_demorows",
+      "src_components_module_page_entryform",
+      "src_components_module_page_listview",
+      "src_components_module_page_modulepage",
+      "src_lib_routes",
+      "src_lib_routes_pageinfo",
+      "src_lib_routes_pagekind",
+      "src_lib_routes_routedefinition",
+      "src_lib_routes_routedefinitions"
+    ],
+    "2": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "3": [
+      "src_app_login_page",
+      "src_app_login_page_loginpage",
+      "src_app_workspace_layout",
+      "src_app_workspace_layout_workspacelayout",
+      "src_components_app_shell",
+      "src_components_app_shell_appshell",
+      "src_components_app_shell_group",
+      "src_components_app_shell_groups",
+      "src_components_app_shell_item",
+      "src_components_legacy_dashboard",
+      "src_components_legacy_dashboard_cards",
+      "src_components_legacy_dashboard_chartplaceholder",
+      "src_components_legacy_dashboard_dashboardpanel",
+      "src_components_legacy_dashboard_legacydashboard",
+      "src_lib_session",
+      "src_lib_session_clearsession",
+      "src_lib_session_getsession",
+      "src_lib_session_savesession",
+      "src_lib_session_session"
+    ],
+    "4": [
+      "next",
+      "package",
+      "package_dependencies",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_json_react",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version",
+      "react_dom"
+    ],
+    "5": [
       "babel_plugin_react_compiler",
       "eslint",
       "eslint_config_next",
@@ -17,41 +133,7 @@
       "types_react_dom",
       "typescript"
     ],
-    "1": [
-      "src_app_workspace_segments_page",
-      "src_app_workspace_segments_page_catchallpage",
-      "src_components_module_page",
-      "src_components_module_page_columns",
-      "src_components_module_page_dashboard",
-      "src_components_module_page_demorows",
-      "src_components_module_page_entryform",
-      "src_components_module_page_listview",
-      "src_components_module_page_metric",
-      "src_components_module_page_modulepage",
-      "src_lib_routes",
-      "src_lib_routes_pageinfo",
-      "src_lib_routes_pagekind",
-      "src_lib_routes_routedefinition",
-      "src_lib_routes_routedefinitions"
-    ],
-    "2": [
-      "tsconfig_compileroptions",
-      "tsconfig_compileroptions_allowjs",
-      "tsconfig_compileroptions_esmoduleinterop",
-      "tsconfig_compileroptions_incremental",
-      "tsconfig_compileroptions_isolatedmodules",
-      "tsconfig_compileroptions_jsx",
-      "tsconfig_compileroptions_module",
-      "tsconfig_compileroptions_moduleresolution",
-      "tsconfig_compileroptions_noemit",
-      "tsconfig_compileroptions_paths",
-      "tsconfig_compileroptions_plugins",
-      "tsconfig_compileroptions_resolvejsonmodule",
-      "tsconfig_compileroptions_skiplibcheck",
-      "tsconfig_compileroptions_strict",
-      "tsconfig_compileroptions_target"
-    ],
-    "3": [
+    "6": [
       "ref_mts",
       "ref_next_dev_types_ts",
       "ref_next_env_d_ts",
@@ -63,18 +145,18 @@
       "tsconfig_exclude",
       "tsconfig_include"
     ],
-    "4": [
-      "package",
-      "package_name",
-      "package_private",
-      "package_scripts",
-      "package_scripts_build",
-      "package_scripts_dev",
-      "package_scripts_lint",
-      "package_scripts_start",
-      "package_version"
+    "7": [
+      "src_components_legacy_order_create",
+      "src_components_legacy_order_create_branch",
+      "src_components_legacy_order_create_classifications",
+      "src_components_legacy_order_create_customer",
+      "src_components_legacy_order_create_equipment",
+      "src_components_legacy_order_create_field",
+      "src_components_legacy_order_create_formsection",
+      "src_components_legacy_order_create_legacyordercreate",
+      "src_components_legacy_order_create_modal"
     ],
-    "5": [
+    "8": [
       "src_app_workspace_tecnicos_page",
       "src_app_workspace_tecnicos_page_filterstate",
       "src_app_workspace_tecnicos_page_initialfilters",
@@ -84,83 +166,156 @@
       "src_app_workspace_tecnicos_page_technicians",
       "src_app_workspace_tecnicos_page_techniciansprototype"
     ],
-    "6": [
-      "next",
-      "package_dependencies",
-      "package_dependencies_next",
-      "package_dependencies_react",
-      "package_dependencies_react_dom",
-      "package_json_react",
-      "react_dom"
-    ],
-    "7": [
-      "src_app_workspace_layout",
-      "src_app_workspace_layout_workspacelayout",
-      "src_components_app_shell",
-      "src_components_app_shell_appshell",
-      "src_components_app_shell_group",
-      "src_components_app_shell_groups",
-      "src_components_app_shell_item"
-    ],
-    "8": [
-      "ref_dom",
-      "ref_dom_iterable",
-      "ref_esnext",
-      "tsconfig_compileroptions_lib"
-    ],
     "9": [
+      "graphify_out_memory_query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip",
+      "graphify_out_memory_query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip_answer",
+      "graphify_out_memory_query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip_outcome",
+      "graphify_out_memory_query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip_q_mira_aqui_esta_un_front_que_han_trabajado_mi_equipo_de_front_pero_le_hacen_falta_cosas_revisa_que_taal_esta_generale_el_grafo_de_graphify_y_veamos_como_vamos_trabajando_alli",
+      "graphify_out_memory_query_20260907_222219_mira_aqui_esta_un_front_que_han_trabajado_mi_equip_source_nodes"
+    ],
+    "10": [
+      "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front",
+      "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front_answer",
+      "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front_outcome",
+      "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front_q_empecemos_a_trabajar_en_el_front",
+      "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front_source_nodes"
+    ],
+    "11": [
+      "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front",
+      "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front_answer",
+      "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front_outcome",
+      "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front_q_empecemos_a_trabajar_en_el_front",
+      "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front_source_nodes"
+    ],
+    "12": [
+      "graphify_out_memory_query_20260907_223333_siguele_rey",
+      "graphify_out_memory_query_20260907_223333_siguele_rey_answer",
+      "graphify_out_memory_query_20260907_223333_siguele_rey_outcome",
+      "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "graphify_out_memory_query_20260907_223333_siguele_rey_source_nodes"
+    ],
+    "13": [
+      "graphify_out_memory_query_20260907_223645_sigale_rey",
+      "graphify_out_memory_query_20260907_223645_sigale_rey_answer",
+      "graphify_out_memory_query_20260907_223645_sigale_rey_outcome",
+      "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "graphify_out_memory_query_20260907_223645_sigale_rey_source_nodes"
+    ],
+    "14": [
+      "graphify_out_memory_query_20260907_224204_sigale_rey",
+      "graphify_out_memory_query_20260907_224204_sigale_rey_answer",
+      "graphify_out_memory_query_20260907_224204_sigale_rey_outcome",
+      "graphify_out_memory_query_20260907_224204_sigale_rey_q_sigale_rey",
+      "graphify_out_memory_query_20260907_224204_sigale_rey_source_nodes"
+    ],
+    "15": [
+      "graphify_out_memory_query_20260907_225207_replica_el_dise\u00f1o_del_login_original_del_sgn_legac",
+      "graphify_out_memory_query_20260907_225207_replica_el_dise\u00f1o_del_login_original_del_sgn_legac_answer",
+      "graphify_out_memory_query_20260907_225207_replica_el_dise\u00f1o_del_login_original_del_sgn_legac_outcome",
+      "graphify_out_memory_query_20260907_225207_replica_el_dise\u00f1o_del_login_original_del_sgn_legac_q_replica_el_dise\u00f1o_del_login_original_del_sgn_legacy",
+      "graphify_out_memory_query_20260907_225207_replica_el_dise\u00f1o_del_login_original_del_sgn_legac_source_nodes"
+    ],
+    "16": [
+      "graphify_out_memory_query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo",
+      "graphify_out_memory_query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo_answer",
+      "graphify_out_memory_query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo_outcome",
+      "graphify_out_memory_query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo_q_migrar_todas_las_vistas_legacy_manteniendo_estilo_visual_y_rehacer_flujo_de_\u00f3rdenes",
+      "graphify_out_memory_query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo_source_nodes"
+    ],
+    "17": [
+      "graphify_out_memory_query_20260908_160217_migrar_todas_las_vistas_legacy_manteniendo_estilo",
+      "graphify_out_memory_query_20260908_160217_migrar_todas_las_vistas_legacy_manteniendo_estilo_answer",
+      "graphify_out_memory_query_20260908_160217_migrar_todas_las_vistas_legacy_manteniendo_estilo_outcome",
+      "graphify_out_memory_query_20260908_160217_migrar_todas_las_vistas_legacy_manteniendo_estilo_q_migrar_todas_las_vistas_legacy_manteniendo_estilo_visual_y_rehacer_flujo_de_\u00f3rdenes",
+      "graphify_out_memory_query_20260908_160217_migrar_todas_las_vistas_legacy_manteniendo_estilo_source_nodes"
+    ],
+    "18": [
+      "graphify_out_memory_query_20260908_161200_sigue_con_frontend_y_haz_backend_necesario",
+      "graphify_out_memory_query_20260908_161200_sigue_con_frontend_y_haz_backend_necesario_answer",
+      "graphify_out_memory_query_20260908_161200_sigue_con_frontend_y_haz_backend_necesario_outcome",
+      "graphify_out_memory_query_20260908_161200_sigue_con_frontend_y_haz_backend_necesario_q_sigue_con_frontend_y_haz_backend_necesario",
+      "graphify_out_memory_query_20260908_161200_sigue_con_frontend_y_haz_backend_necesario_source_nodes"
+    ],
+    "19": [
+      "readme",
+      "readme_ejecutar",
+      "readme_estructura",
+      "readme_integraci\u00f3n_requerida_con_laravel",
+      "readme_sgn_frontend"
+    ],
+    "20": [
       "src_app_layout",
       "src_app_layout_metadata",
       "src_app_layout_rootlayout"
     ],
-    "10": [
-      "src_lib_api",
-      "src_lib_api_api",
-      "src_lib_api_apiurl"
+    "21": [
+      "agents",
+      "agents_this_is_not_the_next_js_you_know"
     ],
-    "11": [
+    "22": [
       "eslint_config",
       "eslint_config_eslintconfig"
     ],
-    "12": [
+    "23": [
       "next_config",
       "next_config_nextconfig"
     ],
-    "13": [
-      "src_app_login_page",
-      "src_app_login_page_loginpage"
-    ],
-    "14": [
+    "24": [
       "src_app_page",
       "src_app_page_home"
     ],
-    "15": [
-      "react_react"
+    "25": [
+      "claude"
     ]
   },
   "cohesion": {
-    "0": 0.13333333333333333,
-    "1": 0.18095238095238095,
-    "2": 0.13333333333333333,
-    "3": 0.2,
-    "4": 0.2222222222222222,
-    "5": 0.25,
-    "6": 0.2857142857142857,
-    "7": 0.3333333333333333,
-    "8": 0.5,
-    "9": 0.6666666666666666,
-    "10": 0.6666666666666666,
-    "11": 1.0,
-    "12": 1.0,
-    "13": 1.0,
-    "14": 1.0,
-    "15": 1.0
+    "0": 0.10114942528735632,
+    "1": 0.12121212121212122,
+    "2": 0.10526315789473684,
+    "3": 0.18128654970760233,
+    "4": 0.125,
+    "5": 0.13333333333333333,
+    "6": 0.2,
+    "7": 0.2222222222222222,
+    "8": 0.25,
+    "9": 0.4,
+    "10": 0.4,
+    "11": 0.4,
+    "12": 0.4,
+    "13": 0.4,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.4,
+    "17": 0.4,
+    "18": 0.4,
+    "19": 0.4,
+    "20": 0.6666666666666666,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0
   },
   "gods": [
     {
       "id": "tsconfig_compileroptions",
       "label": "compilerOptions",
       "degree": 16
+    },
+    {
+      "id": "src_lib_api_api",
+      "label": "api()",
+      "degree": 14
+    },
+    {
+      "id": "src_lib_api_apierror",
+      "label": "ApiError",
+      "degree": 10
+    },
+    {
+      "id": "src_lib_session_getsession",
+      "label": "getSession()",
+      "degree": 10
     },
     {
       "id": "tsconfig_include",
@@ -173,42 +328,49 @@
       "degree": 5
     },
     {
-      "id": "tsconfig_compileroptions_lib",
-      "label": "lib",
+      "id": "src_components_order_detail_orderdetail",
+      "label": "OrderDetail()",
+      "degree": 5
+    },
+    {
+      "id": "src_lib_session_getaccesstoken",
+      "label": "getAccessToken()",
+      "degree": 5
+    },
+    {
+      "id": "graphify_out_memory_query_20260907_222741_empecemos_a_trabajar_en_el_front_q_empecemos_a_trabajar_en_el_front",
+      "label": "Q: Empecemos a trabajar en el front",
       "degree": 4
     },
     {
-      "id": "src_lib_routes_pageinfo",
-      "label": "pageInfo()",
-      "degree": 3
-    },
-    {
-      "id": "src_lib_routes_routedefinition",
-      "label": "RouteDefinition",
-      "degree": 2
-    },
-    {
-      "id": "src_app_workspace_segments_page_catchallpage",
-      "label": "CatchAllPage()",
-      "degree": 2
-    },
-    {
-      "id": "src_components_module_page_modulepage",
-      "label": "ModulePage()",
-      "degree": 2
-    },
-    {
-      "id": "src_components_app_shell_appshell",
-      "label": "AppShell()",
-      "degree": 2
-    },
-    {
-      "id": "package_devdependencies_babel_plugin_react_compiler",
-      "label": "babel-plugin-react-compiler",
-      "degree": 2
+      "id": "graphify_out_memory_query_20260907_223105_empecemos_a_trabajar_en_el_front_q_empecemos_a_trabajar_en_el_front",
+      "label": "Q: Empecemos a trabajar en el front",
+      "degree": 4
     }
   ],
   "surprises": [
+    {
+      "source": "LegacyOrderCreate()",
+      "target": "api()",
+      "source_files": [
+        "src/components/legacy-order-create.tsx",
+        "src/lib/api.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "OrderDetail()",
+      "target": "getSession()",
+      "source_files": [
+        "src/components/order-detail.tsx",
+        "src/lib/session.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
     {
       "source": "CatchAllPage()",
       "target": "pageInfo()",
@@ -219,38 +381,32 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "cross-file semantic connection"
+    },
+    {
+      "source": "LoginPage()",
+      "target": "getSession()",
+      "source_files": [
+        "src/app/login/page.tsx",
+        "src/lib/session.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "LoginPage()",
+      "target": "saveSession()",
+      "source_files": [
+        "src/app/login/page.tsx",
+        "src/lib/session.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
     }
   ],
-  "questions": [
-    {
-      "type": "bridge_node",
-      "question": "Why does `compilerOptions` connect `compilerOptions` to `lib`, `include`?",
-      "why": "High betweenness centrality (0.061) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `devDependencies` connect `devDependencies` to `package.json`?",
-      "why": "High betweenness centrality (0.058) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
-      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
-    },
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `PageKind`, `FilterState`, `Technician` to the rest of the system?",
-      "why": "56 weakly-connected nodes found - possible documentation gaps or missing edges."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `devDependencies` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `compilerOptions` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
-    }
-  ]
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
 }

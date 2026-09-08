@@ -1,0 +1,18 @@
+"use client";
+
+import Link from "next/link";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { api, ApiError } from "@/lib/api";
+import "./legacy-tickets.css";
+
+type Ticket = { id: string; code: string; type: string; category: string; priority: string; status: string; title: string; openedAt: string; updatedAt: string; assigneeId: string | null };
+const statusLabel: Record<string, string> = { Open: "Abierto", InProgress: "En proceso", Waiting: "En espera", Resolved: "Resuelto", Closed: "Cerrado", InMba: "En MBA" };
+
+export function LegacyTickets({ management = false }: { management?: boolean }) {
+  const [tickets, setTickets] = useState<Ticket[]>([]); const [query, setQuery] = useState(""); const [status, setStatus] = useState(""); const [loading, setLoading] = useState(true); const [error, setError] = useState("");
+  const load = useCallback(async () => { setLoading(true); setError(""); try { setTickets(await api<Ticket[]>("/api/tickets")); } catch (e) { setError(e instanceof ApiError && e.status === 403 ? "No tienes acceso a estos tickets." : "No se pudieron cargar los tickets."); } finally { setLoading(false); } }, []);
+  useEffect(() => { void load(); }, [load]);
+  const visible = useMemo(() => tickets.filter((ticket) => `${ticket.code} ${ticket.title} ${ticket.category}`.toLowerCase().includes(query.toLowerCase()) && (!status || ticket.status === status)), [tickets, query, status]);
+  const statuses = [...new Set(tickets.map((ticket) => ticket.status))];
+  return <section className="lt-wrap"><header className="lt-head"><div><span><i className="bi bi-ticket-perforated" /> Portal de Requerimientos y Soporte</span><h2>{management ? "Gestión de Tickets" : "Mis Solicitudes y Tickets"}</h2><p>{management ? "Revisa y controla los tickets a tu cargo." : "Haz seguimiento a tus solicitudes en tiempo real."}</p></div><Link href="/tickets/crear"><i className="bi bi-plus-circle-fill" /> Crear nuevo ticket</Link></header><div className="lt-kpis"><div><small>Total creados</small><strong>{tickets.length}</strong></div><div><small>En atención</small><strong>{tickets.filter((ticket) => !["Resolved", "Closed"].includes(ticket.status)).length}</strong></div><div><small>Resueltos</small><strong>{tickets.filter((ticket) => ticket.status === "Resolved").length}</strong></div><div><small>Cerrados</small><strong>{tickets.filter((ticket) => ticket.status === "Closed").length}</strong></div></div><div className="lt-filters"><label><i className="bi bi-search" /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Código, título o categoría…" /></label><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">Todos los estados</option>{statuses.map((value) => <option key={value} value={value}>{statusLabel[value] ?? value}</option>)}</select><button onClick={() => { setQuery(""); setStatus(""); }}><i className="bi bi-x-circle" /> Limpiar</button></div>{error && <p className="lt-error">{error}</p>}{loading ? <div className="lt-empty">Cargando tickets…</div> : visible.length === 0 ? <div className="lt-empty">No hay tickets para mostrar.</div> : <div className="lt-grid">{visible.map((ticket) => <article key={ticket.id} className="lt-card"><div><strong>{ticket.code}</strong><span className={`lt-status ${ticket.status}`}>{statusLabel[ticket.status] ?? ticket.status}</span></div><h3>{ticket.title}</h3><p><i className="bi bi-tag" /> {ticket.category} · {ticket.type}</p><footer><small><i className="bi bi-clock" /> {new Date(ticket.updatedAt).toLocaleString("es-EC")}</small><Link href={`/tickets/${ticket.id}`}>Ver <i className="bi bi-chevron-right" /></Link></footer></article>)}</div>}</section>;
+}

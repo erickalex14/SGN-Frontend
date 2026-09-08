@@ -17,7 +17,7 @@
   "15": "react",
   "16": "Q: Empecemos a trabajar en el front",
   "17": "Q: Empecemos a trabajar en el front",
-  "18": "legacy-order-create.tsx",
+  "18": "api",
   "19": "Q: Siguele rey",
   "20": "Q: Sigale rey",
   "21": "Q: Sigale rey",
@@ -25,5 +25,5 @@
   "23": "Q: Migrar todas las vistas legacy manteniendo estilo visual y rehacer flujo de órdenes",
   "24": "Q: Migrar todas las vistas legacy manteniendo estilo visual y rehacer flujo de órdenes",
   "25": "Q: Sigue con frontend y haz backend necesario",
-  "26": "app-shell.tsx"
+  "26": "legacy-order-create.tsx"
 }

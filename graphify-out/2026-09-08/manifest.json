@@ -45,13 +45,13 @@
     "semantic_hash": "0ce9079877d17a3564fad10d69714bb3"
   },
   "src/components/app-shell.tsx": {
-    "mtime": 1788820237.972839,
-    "ast_hash": "abc8769015f3c90ab871de4bec929955",
+    "mtime": 1788894186.8567102,
+    "ast_hash": "a706b0b1aba124aeafe4a985604f9495",
     "semantic_hash": ""
   },
   "src/components/module-page.tsx": {
-    "mtime": 1788892067.5588992,
-    "ast_hash": "62c7f4373cb4e89d04e4666d0898cf98",
+    "mtime": 1788900600.8296268,
+    "ast_hash": "9192fdfa7cbea3753888ca617cbe1839",
     "semantic_hash": ""
   },
   "src/lib/api.ts": {
@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "src/lib/routes.ts": {
-    "mtime": 1788820236.3477366,
-    "ast_hash": "7baf25d44d50d8bf92d6d8c66956affc",
+    "mtime": 1788894183.7320263,
+    "ast_hash": "b289793560e89c7f948740598abd7ce8",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -160,13 +160,13 @@
     "semantic_hash": ""
   },
   "src/components/technical-queue.tsx": {
-    "mtime": 1788891625.1233532,
-    "ast_hash": "e5069013fa8caeb75dce970216be91f1",
+    "mtime": 1788893163.3128903,
+    "ast_hash": "723bce77593a0d356ea218008c820ab6",
     "semantic_hash": ""
   },
   "src/components/order-detail.tsx": {
-    "mtime": 1788892349.0907204,
-    "ast_hash": "d5b18f29b1698a30582e0e4665d7c59a",
+    "mtime": 1788894033.8237972,
+    "ast_hash": "2e910fab0742c61a93d3eb3a58d42b3d",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260907_223105_empecemos_a_trabajar_en_el_front.md": {
@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "src/components/legacy-order-create.tsx": {
-    "mtime": 1788883861.2434266,
-    "ast_hash": "51f3acefe95722818f7f4de7b36e96cf",
+    "mtime": 1788906522.5817735,
+    "ast_hash": "bfe0aa1061e5b27b09dd4001f41daf21",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260908_160044_migrar_todas_las_vistas_legacy_manteniendo_estilo.md": {
@@ -222,6 +222,21 @@
   "src/components/legacy-order-search.tsx": {
     "mtime": 1788892065.2651043,
     "ast_hash": "d2738a992fe2406eeec6dcb61da7b828",
+    "semantic_hash": ""
+  },
+  "src/components/legacy-tickets.tsx": {
+    "mtime": 1788898501.7300384,
+    "ast_hash": "37641e0c54844cd5a755e5127618a36b",
+    "semantic_hash": ""
+  },
+  "src/components/ticket-detail.tsx": {
+    "mtime": 1788905293.3956382,
+    "ast_hash": "d610d32f785fd49a3aa46b0f9a593a84",
+    "semantic_hash": ""
+  },
+  "src/components/ticket-create.tsx": {
+    "mtime": 1788900599.3473032,
+    "ast_hash": "1d8523d6c6001b0e9566a6c915750921",
     "semantic_hash": ""
   }
 }

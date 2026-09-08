@@ -1,16 +1,16 @@
 # Graph Report - SGN-Frontend  (2026-09-08)
 
 ## Corpus Check
-- 33 files · ~45,493 words
+- 36 files · ~47,465 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 199 nodes · 221 edges · 27 communities (23 shown, 4 thin omitted)
+- 215 nodes · 250 edges · 27 communities (23 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9e163e2c`
+- Built from commit: `7947b5f9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -30,7 +30,7 @@
 - next.config.ts
 - Q: Empecemos a trabajar en el front
 - Q: Empecemos a trabajar en el front
-- legacy-order-create.tsx
+- api
 - Q: Siguele rey
 - Q: Sigale rey
 - Q: Sigale rey
@@ -38,13 +38,13 @@
 - Q: Migrar todas las vistas legacy manteniendo estilo visual y rehacer flujo de órdenes
 - Q: Migrar todas las vistas legacy manteniendo estilo visual y rehacer flujo de órdenes
 - Q: Sigue con frontend y haz backend necesario
-- app-shell.tsx
+- legacy-order-create.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
-2. `api()` - 10 edges
-3. `getSession()` - 8 edges
-4. `ApiError` - 7 edges
+2. `api()` - 14 edges
+3. `ApiError` - 10 edges
+4. `getSession()` - 8 edges
 5. `include` - 7 edges
 6. `scripts` - 5 edges
 7. `AppShell()` - 4 edges
@@ -53,12 +53,12 @@
 10. `SGN Frontend` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `AppShell()` --calls--> `getSession()`  [EXTRACTED]
-  src/components/app-shell.tsx → src/lib/session.ts
 - `LegacyDashboard()` --calls--> `getSession()`  [EXTRACTED]
   src/components/legacy-dashboard.tsx → src/lib/session.ts
 - `LegacyOrderCreate()` --calls--> `api()`  [EXTRACTED]
   src/components/legacy-order-create.tsx → src/lib/api.ts
+- `api()` --calls--> `getAccessToken()`  [EXTRACTED]
+  src/lib/api.ts → src/lib/session.ts
 - `CatchAllPage()` --calls--> `pageInfo()`  [EXTRACTED]
   src/app/(workspace)/[...segments]/page.tsx → src/lib/routes.ts
 - `LoginPage()` --calls--> `getSession()`  [EXTRACTED]
@@ -74,8 +74,8 @@ Cohesion: 0.13
 Nodes (15): babel-plugin-react-compiler, eslint, eslint-config-next, devDependencies, babel-plugin-react-compiler, eslint, eslint-config-next, @types/node (+7 more)
 
 ### Community 1 - "module-page.tsx"
-Cohesion: 0.11
-Nodes (14): CatchAllPage(), cards, LegacyDashboard(), CurrentOrder, LegacyOrder, LegacyOrderSearch(), Lookup, columns (+6 more)
+Cohesion: 0.10
+Nodes (17): CatchAllPage(), cards, LegacyDashboard(), CurrentOrder, LegacyOrder, LegacyOrderSearch(), Lookup, LegacyTickets() (+9 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.11
@@ -98,8 +98,8 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: mira aqui esta un front que han trabajado mi equipo de front, pero le hacen falta cosas, revisa que taal esta, generale el grafo de graphify y veamos como vamos trabajando alli, Source Nodes
 
 ### Community 7 - "api.ts"
-Cohesion: 0.14
-Nodes (18): LoginPage(), Order, OrderDetail(), PartItem, Quote, Workflow, classes, labels (+10 more)
+Cohesion: 0.22
+Nodes (11): LoginPage(), AppShell(), Group, groups, Item, apiUrl, clearSession(), getAccessToken() (+3 more)
 
 ### Community 8 - "SGN Frontend"
 Cohesion: 0.40
@@ -113,9 +113,9 @@ Nodes (4): Answer, Outcome, Q: Empecemos a trabajar en el front, Source Nodes
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Empecemos a trabajar en el front, Source Nodes
 
-### Community 18 - "legacy-order-create.tsx"
-Cohesion: 0.25
-Nodes (5): Branch, classifications, Customer, Equipment, LegacyOrderCreate()
+### Community 18 - "api"
+Cohesion: 0.10
+Nodes (21): Order, OrderDetail(), PartItem, PartsRequest, Quote, Workflow, classes, labels (+13 more)
 
 ### Community 19 - "Q: Siguele rey"
 Cohesion: 0.40
@@ -145,12 +145,12 @@ Nodes (4): Answer, Outcome, Q: Migrar todas las vistas legacy manteniendo estilo
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Sigue con frontend y haz backend necesario, Source Nodes
 
-### Community 26 - "app-shell.tsx"
-Cohesion: 0.32
-Nodes (5): AppShell(), Group, groups, Item, clearSession()
+### Community 26 - "legacy-order-create.tsx"
+Cohesion: 0.22
+Nodes (5): Branch, classifications, Customer, Equipment, LegacyOrderCreate()
 
 ## Knowledge Gaps
-- **106 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+101 more)
+- **115 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+110 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -158,16 +158,16 @@ Nodes (5): AppShell(), Group, groups, Item, clearSession()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `compilerOptions` connect `compilerOptions` to `include`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `api()` connect `api` to `module-page.tsx`, `legacy-order-create.tsx`, `api.ts`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `getSession()` connect `api.ts` to `module-page.tsx`, `app-shell.tsx`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _106 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _115 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `module-page.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.11462450592885376 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09686609686609686 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

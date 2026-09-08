@@ -31,3 +31,24 @@ export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
 
   return response.json() as Promise<T>;
 }
+
+export async function apiDownload(path: string): Promise<{ blob: Blob; fileName: string | null }> {
+  if (!apiUrl) throw new Error("NEXT_PUBLIC_API_URL is not configured.");
+  const token = getAccessToken();
+  const response = await fetch(`${apiUrl}${path}`, {
+    headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+  });
+
+  if (!response.ok) {
+    const payload = await response.json().catch(() => null) as { error?: string; title?: string } | null;
+    throw new ApiError(response.status, payload?.error ?? payload?.title ?? `API request failed (${response.status})`);
+  }
+
+  const disposition = response.headers.get("Content-Disposition");
+  const encodedName = disposition?.match(/filename\*=UTF-8''([^;]+)/i)?.[1];
+  const plainName = disposition?.match(/filename="?([^";]+)"?/i)?.[1];
+  return {
+    blob: await response.blob(),
+    fileName: encodedName ? decodeURIComponent(encodedName) : plainName ?? null,
+  };
+}
