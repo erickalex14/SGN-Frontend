@@ -5,6 +5,7 @@ export const routeDefinitions: Record<string, RouteDefinition> = {
   dashboard: { title: "Dashboard", group: "Principal" },
   "operaciones/ordenes/crear": { title: "Crear orden de servicio", group: "Órdenes", kind: "form" },
   "operaciones/ordenes-disponibles": { title: "Órdenes disponibles", group: "Órdenes" },
+  "operaciones/garantias-pendientes": { title: "Garantías pendientes", group: "Órdenes" },
   "operaciones/mis-ordenes": { title: "Mis órdenes", group: "Órdenes" },
   "operaciones/ordenes-asignadas": { title: "Órdenes asignadas", group: "Órdenes" },
   "operaciones/ordenes/buscar": { title: "Buscar órdenes", group: "Órdenes" },

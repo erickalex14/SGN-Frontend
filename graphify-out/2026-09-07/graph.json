@@ -4,32 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "Order",
-      "file_type": "code",
-      "source_file": "src/components/technical-queue.tsx",
-      "source_location": "L7",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_technical_queue_order",
-      "community": 1,
-      "community_name": "module-page.tsx",
-      "norm_label": "order"
-    },
-    {
-      "label": "OrderList",
-      "file_type": "code",
-      "source_file": "src/components/technical-queue.tsx",
-      "source_location": "L18",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_technical_queue_orderlist",
-      "community": 1,
-      "community_name": "module-page.tsx",
-      "norm_label": "orderlist"
-    },
-    {
       "label": "PageKind",
       "file_type": "code",
       "source_file": "src/lib/routes.ts",
@@ -54,6 +28,45 @@
       "community": 1,
       "community_name": "module-page.tsx",
       "norm_label": "routedefinition"
+    },
+    {
+      "label": "Group",
+      "file_type": "code",
+      "source_file": "src/components/app-shell.tsx",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_app_shell_group",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "group"
+    },
+    {
+      "label": "Item",
+      "file_type": "code",
+      "source_file": "src/components/app-shell.tsx",
+      "source_location": "L8",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_app_shell_item",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "item"
+    },
+    {
+      "label": "Session",
+      "file_type": "code",
+      "source_file": "src/lib/session.ts",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_session_session",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "session"
     },
     {
       "label": "FilterState",
@@ -82,32 +95,6 @@
       "norm_label": "technician"
     },
     {
-      "label": "Group",
-      "file_type": "code",
-      "source_file": "src/components/app-shell.tsx",
-      "source_location": "L9",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_app_shell_group",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "group"
-    },
-    {
-      "label": "Item",
-      "file_type": "code",
-      "source_file": "src/components/app-shell.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_app_shell_item",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "item"
-    },
-    {
       "label": "Order",
       "file_type": "code",
       "source_file": "src/components/order-detail.tsx",
@@ -117,21 +104,73 @@
       "_origin": "ast",
       "id": "src_components_order_detail_order",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "order"
     },
     {
-      "label": "Workflow",
+      "label": "PartItem",
+      "file_type": "code",
+      "source_file": "src/components/order-detail.tsx",
+      "source_location": "L20",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_order_detail_partitem",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "partitem"
+    },
+    {
+      "label": "Quote",
       "file_type": "code",
       "source_file": "src/components/order-detail.tsx",
       "source_location": "L18",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
+      "id": "src_components_order_detail_quote",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "quote"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "code",
+      "source_file": "src/components/order-detail.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
       "id": "src_components_order_detail_workflow",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "workflow"
+    },
+    {
+      "label": "Order",
+      "file_type": "code",
+      "source_file": "src/components/technical-queue.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_technical_queue_order",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "order"
+    },
+    {
+      "label": "OrderList",
+      "file_type": "code",
+      "source_file": "src/components/technical-queue.tsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_technical_queue_orderlist",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "orderlist"
     },
     {
       "label": "ApiError",
@@ -143,21 +182,8 @@
       "_origin": "ast",
       "id": "src_lib_api_apierror",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "apierror"
-    },
-    {
-      "label": "Session",
-      "file_type": "code",
-      "source_file": "src/lib/session.ts",
-      "source_location": "L1",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_session_session",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "session"
     },
     {
       "label": "CatchAllPage()",
@@ -232,18 +258,6 @@
       "norm_label": "modulepage()"
     },
     {
-      "label": "TechnicalQueue()",
-      "file_type": "code",
-      "source_file": "src/components/technical-queue.tsx",
-      "source_location": "L28",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_technical_queue_technicalqueue",
-      "community": 1,
-      "community_name": "module-page.tsx",
-      "norm_label": "technicalqueue()"
-    },
-    {
       "label": "pageInfo()",
       "file_type": "code",
       "source_file": "src/lib/routes.ts",
@@ -266,6 +280,78 @@
       "community": 14,
       "community_name": "app/page.tsx",
       "norm_label": "home()"
+    },
+    {
+      "label": "LoginPage()",
+      "file_type": "code",
+      "source_file": "src/app/login/page.tsx",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_login_page_loginpage",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "loginpage()"
+    },
+    {
+      "label": "WorkspaceLayout()",
+      "file_type": "code",
+      "source_file": "src/app/(workspace)/layout.tsx",
+      "source_location": "L2",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_workspace_layout_workspacelayout",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "workspacelayout()"
+    },
+    {
+      "label": "AppShell()",
+      "file_type": "code",
+      "source_file": "src/components/app-shell.tsx",
+      "source_location": "L20",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_app_shell_appshell",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "appshell()"
+    },
+    {
+      "label": "clearSession()",
+      "file_type": "code",
+      "source_file": "src/lib/session.ts",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_session_clearsession",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "clearsession()"
+    },
+    {
+      "label": "getSession()",
+      "file_type": "code",
+      "source_file": "src/lib/session.ts",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_session_getsession",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "getsession()"
+    },
+    {
+      "label": "saveSession()",
+      "file_type": "code",
+      "source_file": "src/lib/session.ts",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_session_savesession",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "savesession()"
     },
     {
       "label": "Metric()",
@@ -304,52 +390,28 @@
       "norm_label": "techniciansprototype()"
     },
     {
-      "label": "LoginPage()",
-      "file_type": "code",
-      "source_file": "src/app/login/page.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_login_page_loginpage",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "loginpage()"
-    },
-    {
-      "label": "WorkspaceLayout()",
-      "file_type": "code",
-      "source_file": "src/app/(workspace)/layout.tsx",
-      "source_location": "L2",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_workspace_layout_workspacelayout",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "workspacelayout()"
-    },
-    {
-      "label": "AppShell()",
-      "file_type": "code",
-      "source_file": "src/components/app-shell.tsx",
-      "source_location": "L20",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_app_shell_appshell",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "appshell()"
-    },
-    {
       "label": "OrderDetail()",
       "file_type": "code",
       "source_file": "src/components/order-detail.tsx",
-      "source_location": "L20",
+      "source_location": "L22",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_order_detail_orderdetail",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "orderdetail()"
+    },
+    {
+      "label": "TechnicalQueue()",
+      "file_type": "code",
+      "source_file": "src/components/technical-queue.tsx",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_technical_queue_technicalqueue",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "technicalqueue()"
     },
     {
       "label": "api()",
@@ -360,7 +422,7 @@
       "_origin": "ast",
       "id": "src_lib_api_api",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "api()"
     },
     {
@@ -372,20 +434,8 @@
       "_origin": "ast",
       "id": "src_lib_api_apierror_constructor",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": ".constructor()"
-    },
-    {
-      "label": "clearSession()",
-      "file_type": "code",
-      "source_file": "src/lib/session.ts",
-      "source_location": "L35",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_session_clearsession",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "clearsession()"
     },
     {
       "label": "getAccessToken()",
@@ -396,32 +446,8 @@
       "_origin": "ast",
       "id": "src_lib_session_getaccesstoken",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "getaccesstoken()"
-    },
-    {
-      "label": "getSession()",
-      "file_type": "code",
-      "source_file": "src/lib/session.ts",
-      "source_location": "L15",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_session_getsession",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "getsession()"
-    },
-    {
-      "label": "saveSession()",
-      "file_type": "code",
-      "source_file": "src/lib/session.ts",
-      "source_location": "L31",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_session_savesession",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "savesession()"
     },
     {
       "label": "RootLayout()",
@@ -643,28 +669,6 @@
       "community": 1,
       "community_name": "module-page.tsx",
       "norm_label": "demorows"
-    },
-    {
-      "label": "technical-queue.tsx",
-      "file_type": "code",
-      "source_file": "src/components/technical-queue.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_technical_queue",
-      "community": 1,
-      "community_name": "module-page.tsx",
-      "norm_label": "technical-queue.tsx"
-    },
-    {
-      "label": "priorityLabel",
-      "file_type": "code",
-      "source_file": "src/components/technical-queue.tsx",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_components_technical_queue_prioritylabel",
-      "community": 1,
-      "community_name": "module-page.tsx",
-      "norm_label": "prioritylabel"
     },
     {
       "label": "routes.ts",
@@ -898,6 +902,116 @@
       "norm_label": "source nodes"
     },
     {
+      "label": "login/page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/login/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_login_page",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "login/page.tsx"
+    },
+    {
+      "label": "(workspace)/layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/(workspace)/layout.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_workspace_layout",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "(workspace)/layout.tsx"
+    },
+    {
+      "label": "app-shell.tsx",
+      "file_type": "code",
+      "source_file": "src/components/app-shell.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_app_shell",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "app-shell.tsx"
+    },
+    {
+      "label": "groups",
+      "file_type": "code",
+      "source_file": "src/components/app-shell.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_app_shell_groups",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "groups"
+    },
+    {
+      "label": "session.ts",
+      "file_type": "code",
+      "source_file": "src/lib/session.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_session",
+      "community": 18,
+      "community_name": "app-shell.tsx",
+      "norm_label": "session.ts"
+    },
+    {
+      "label": "query_20260907_223333_siguele_rey.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223333_siguele_rey",
+      "community": 19,
+      "community_name": "Q: Siguele rey",
+      "norm_label": "query_20260907_223333_siguele_rey.md"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223333_siguele_rey_answer",
+      "community": 19,
+      "community_name": "Q: Siguele rey",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223333_siguele_rey_outcome",
+      "community": 19,
+      "community_name": "Q: Siguele rey",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Q: Siguele rey",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "community": 19,
+      "community_name": "Q: Siguele rey",
+      "norm_label": "q: siguele rey"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223333_siguele_rey_source_nodes",
+      "community": 19,
+      "community_name": "Q: Siguele rey",
+      "norm_label": "source nodes"
+    },
+    {
       "label": "compilerOptions",
       "file_type": "code",
       "source_file": "tsconfig.json",
@@ -1105,6 +1219,61 @@
       "community": 2,
       "community_name": "compilerOptions",
       "norm_label": "esnext"
+    },
+    {
+      "label": "query_20260907_223645_sigale_rey.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223645_sigale_rey",
+      "community": 20,
+      "community_name": "Q: Sigale rey",
+      "norm_label": "query_20260907_223645_sigale_rey.md"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223645_sigale_rey_answer",
+      "community": 20,
+      "community_name": "Q: Sigale rey",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223645_sigale_rey_outcome",
+      "community": 20,
+      "community_name": "Q: Sigale rey",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Q: Sigale rey",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "community": 20,
+      "community_name": "Q: Sigale rey",
+      "norm_label": "q: sigale rey"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260907_223645_sigale_rey_source_nodes",
+      "community": 20,
+      "community_name": "Q: Sigale rey",
+      "norm_label": "source nodes"
     },
     {
       "label": "tsconfig.json",
@@ -1481,50 +1650,6 @@
       "norm_label": "source nodes"
     },
     {
-      "label": "login/page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/login/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_login_page",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "login/page.tsx"
-    },
-    {
-      "label": "(workspace)/layout.tsx",
-      "file_type": "code",
-      "source_file": "src/app/(workspace)/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_workspace_layout",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "(workspace)/layout.tsx"
-    },
-    {
-      "label": "app-shell.tsx",
-      "file_type": "code",
-      "source_file": "src/components/app-shell.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_app_shell",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "app-shell.tsx"
-    },
-    {
-      "label": "groups",
-      "file_type": "code",
-      "source_file": "src/components/app-shell.tsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "src_components_app_shell_groups",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "groups"
-    },
-    {
       "label": "order-detail.tsx",
       "file_type": "code",
       "source_file": "src/components/order-detail.tsx",
@@ -1532,8 +1657,30 @@
       "_origin": "ast",
       "id": "src_components_order_detail",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "order-detail.tsx"
+    },
+    {
+      "label": "technical-queue.tsx",
+      "file_type": "code",
+      "source_file": "src/components/technical-queue.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_technical_queue",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "technical-queue.tsx"
+    },
+    {
+      "label": "priorityLabel",
+      "file_type": "code",
+      "source_file": "src/components/technical-queue.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "src_components_technical_queue_prioritylabel",
+      "community": 7,
+      "community_name": "order-detail.tsx",
+      "norm_label": "prioritylabel"
     },
     {
       "label": "api.ts",
@@ -1543,7 +1690,7 @@
       "_origin": "ast",
       "id": "src_lib_api",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "api.ts"
     },
     {
@@ -1554,19 +1701,8 @@
       "_origin": "ast",
       "id": "src_lib_api_apiurl",
       "community": 7,
-      "community_name": "app-shell.tsx",
+      "community_name": "order-detail.tsx",
       "norm_label": "apiurl"
-    },
-    {
-      "label": "session.ts",
-      "file_type": "code",
-      "source_file": "src/lib/session.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_session",
-      "community": 7,
-      "community_name": "app-shell.tsx",
-      "norm_label": "session.ts"
     },
     {
       "label": "README.md",
@@ -1713,7 +1849,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/order-detail.tsx",
-      "source_location": "L40",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_order_detail_orderdetail",
@@ -2524,6 +2660,94 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223333_siguele_rey",
+      "target": "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "target": "graphify_out_memory_query_20260907_223333_siguele_rey_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "target": "graphify_out_memory_query_20260907_223333_siguele_rey_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223333_siguele_rey.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223333_siguele_rey_q_siguele_rey",
+      "target": "graphify_out_memory_query_20260907_223333_siguele_rey_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223645_sigale_rey",
+      "target": "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "target": "graphify_out_memory_query_20260907_223645_sigale_rey_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "target": "graphify_out_memory_query_20260907_223645_sigale_rey_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260907_223645_sigale_rey.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260907_223645_sigale_rey_q_sigale_rey",
+      "target": "graphify_out_memory_query_20260907_223645_sigale_rey_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "next.config.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -3068,6 +3292,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_order_detail",
+      "target": "src_components_order_detail_quote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/order-detail.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_order_detail",
       "target": "src_components_order_detail_workflow",
       "confidence_score": 1.0
     },
@@ -3076,6 +3311,17 @@
       "confidence": "EXTRACTED",
       "source_file": "src/components/order-detail.tsx",
       "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_order_detail",
+      "target": "src_components_order_detail_partitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/order-detail.tsx",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_order_detail",
@@ -3480,5 +3726,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b46927627b8538dc621261cf9758fc7ce00dba4e"
+  "built_at_commit": "9e163e2ce4e150b79aa06e8768c086d497e18d76"
 }

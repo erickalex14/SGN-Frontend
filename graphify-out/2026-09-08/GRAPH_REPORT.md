@@ -1,7 +1,7 @@
 # Graph Report - SGN-Frontend  (2026-09-08)
 
 ## Corpus Check
-- 33 files · ~45,493 words
+- 33 files · ~45,372 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
