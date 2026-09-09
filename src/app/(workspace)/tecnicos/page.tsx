@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import "./tecnicos.css";
 
 type Technician = {
@@ -137,9 +138,11 @@ function TechnicianCard({ tech }: { tech: Technician }) {
       {/* PERFIL */}
       <div className="tech-profile">
         {tech.photo ? (
-          <img
+          <Image
             src={tech.photo}
             alt={`Foto de ${tech.name}`}
+            width={64}
+            height={64}
           />
         ) : (
           <div className="tech-avatar-placeholder">

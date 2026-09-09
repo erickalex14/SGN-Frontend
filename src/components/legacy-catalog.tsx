@@ -1,0 +1,10 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import "./legacy-catalog.css";
+
+type CatalogProps = { eyebrow: string; title: string; description: string; createLabel: string; columns: string[] };
+export function LegacyCatalog({ eyebrow, title, description, createLabel, columns }: CatalogProps) {
+  const [query, setQuery] = useState(""); const [modal, setModal] = useState(false); const empty = useMemo(() => !query.trim(), [query]);
+  return <section className="lc-wrap"><header className="lc-header"><div><span><i className="bi bi-folder2-open" /> {eyebrow}</span><h1>{title}</h1><p>{description}</p></div><button onClick={() => setModal(true)}><i className="bi bi-plus-circle-fill" /> {createLabel}</button></header><div className="lc-tools"><label><i className="bi bi-search" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={`Buscar en ${title.toLowerCase()}...`} /></label><button onClick={() => setQuery("")}><i className="bi bi-x-circle" /> Limpiar</button></div><article className="lc-table"><table><thead><tr>{columns.map((column) => <th key={column}>{column}</th>)}<th>Acciones</th></tr></thead><tbody><tr><td colSpan={columns.length + 1} className="lc-empty"><i className="bi bi-inbox" />{empty ? `No hay registros de ${title.toLowerCase()} para mostrar.` : "No hay resultados para esta búsqueda."}<button onClick={() => setModal(true)}>Crear el primer registro</button></td></tr></tbody></table></article>{modal && <div className="lc-modal"><form onSubmit={(event) => { event.preventDefault(); setModal(false); }}><header><h2>{createLabel}</h2><button type="button" onClick={() => setModal(false)}>×</button></header><label>Nombre<input required placeholder="Ingrese un nombre" /></label><label>Código<input placeholder="Código o referencia" /></label><label>Estado<select defaultValue="active"><option value="active">Activo</option><option value="inactive">Inactivo</option></select></label><footer><button type="button" onClick={() => setModal(false)}>Cancelar</button><button>Guardar</button></footer></form></div>}</section>;
+}
