@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "src/components/module-page.tsx": {
-    "mtime": 1788973552.5534217,
-    "ast_hash": "3613b2ce6b8c4a73bfee5e655137c84e",
+    "mtime": 1788972900.2462022,
+    "ast_hash": "cc98619fcd9c12588bd67564fce03781",
     "semantic_hash": ""
   },
   "src/lib/api.ts": {
@@ -240,8 +240,8 @@
     "semantic_hash": "1d8523d6c6001b0e9566a6c915750921"
   },
   "HANDOFF.md": {
-    "mtime": 1788972930.4768364,
-    "ast_hash": "4e03ea253ddb6f01832ccd1d884b370c",
+    "mtime": 1788972737.0795774,
+    "ast_hash": "58cb7f2e384086f7eda4a16faf98d59f",
     "semantic_hash": ""
   },
   "src/lib/order-status.ts": {
@@ -272,11 +272,6 @@
   "src/components/inventory-pages.tsx": {
     "mtime": 1788972892.6890476,
     "ast_hash": "6bcd346a32e7a47b3dc0318c99b343ae",
-    "semantic_hash": ""
-  },
-  "src/components/users-page.tsx": {
-    "mtime": 1788973546.1293137,
-    "ast_hash": "aacaf65dd663cad15f9a88df8250f62f",
     "semantic_hash": ""
   }
 }

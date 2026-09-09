@@ -1,0 +1,267 @@
+/* Clon visual de la pantalla de gestión de orden legacy (operations/mis_ordenes + ordenes/editar).
+   Reestiliza las clases que ya usa order-detail.tsx; la lógica del flujo V2 no cambia. */
+:root {
+  --mo-blue: #1a3d7c;
+  --mo-slate: #0f172a;
+  --mo-muted: #64748b;
+  --mo-border: #e2e8f0;
+  --mo-surface: #f8fafc;
+}
+
+.od-root {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.od-root.order-detail {
+  display: grid;
+  gap: 22px;
+}
+
+/* Bloques = .panel-bloque legacy */
+.od-root .panel,
+.od-root.panel {
+  background: #fff;
+  border: 1px solid var(--mo-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .06);
+  padding: 20px 22px;
+}
+.od-root .panel > h2 {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--mo-muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.od-root .panel > p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--mo-muted);
+}
+
+.od-root.panel.no-data,
+.od-root.panel.form-error {
+  padding: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--mo-muted);
+}
+.od-root.panel.form-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* Cabecera de la orden = .det-titulo / .det-nro legacy */
+.od-root .order-summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.od-root .order-summary h2 {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--mo-blue);
+  letter-spacing: .02em;
+}
+.od-root .order-summary p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--mo-muted);
+}
+.od-root .status-pill {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Datos = .det-grid / .det-campo legacy */
+.od-root .order-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  margin: 18px 0 0;
+}
+.od-root .order-data dt {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.od-root .order-data dd {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: var(--mo-slate);
+  white-space: pre-wrap;
+}
+
+/* Panel de gestión (razón + acciones) = .gestion-panel legacy */
+.od-root .decision-reason {
+  display: grid;
+  gap: 7px;
+  margin-top: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #475569;
+}
+.od-root .decision-reason textarea,
+.od-root .decision-reason input,
+.od-root .parts-list input {
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 12.5px;
+  background: #fff;
+  resize: vertical;
+  transition: border-color .18s, box-shadow .18s;
+}
+.od-root .decision-reason textarea:focus,
+.od-root .decision-reason input:focus,
+.od-root .parts-list input:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, .12);
+}
+.od-root .check-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.od-root .parts-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+.od-root .parts-list > div {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 8px;
+}
+
+/* Acciones = .card-actions / .btn-accion legacy */
+.od-root .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+.od-root .actions .primary,
+.od-root .actions .secondary {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .15s, transform .15s;
+}
+.od-root .actions .primary:hover,
+.od-root .actions .secondary:hover {
+  opacity: .88;
+  transform: translateY(-1px);
+}
+.od-root .actions .primary {
+  background: var(--mo-slate);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .22);
+}
+.od-root .actions .secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border-color: var(--mo-border);
+}
+.od-root .actions .primary:disabled,
+.od-root .actions .secondary:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+.od-root .form-error {
+  margin: 10px 0 0;
+  padding: 9px 13px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #991b1b;
+}
+
+/* Listas: evidencias = .cred-row, historial = .td-history li legacy */
+.od-root .simple-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.od-root .simple-list li {
+  background: var(--mo-surface);
+  border: 1.5px solid var(--mo-border);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: var(--mo-slate);
+}
+.od-root .simple-list small {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--mo-muted);
+  font-size: 11px;
+}
+.od-root .evidence-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.od-root .evidence-list li span {
+  display: grid;
+  min-width: 0;
+}
+.od-root .evidence-list li small {
+  margin: 3px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.od-root .evidence-list button {
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.od-root .evidence-list button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+@media (max-width: 640px) {
+  .od-root .order-data {
+    grid-template-columns: 1fr;
+  }
+  .od-root .parts-list > div {
+    grid-template-columns: 1fr 70px;
+  }
+}

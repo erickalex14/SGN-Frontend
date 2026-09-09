@@ -1,0 +1,68 @@
+/* Clon de resources/views/identity/{mi_cuenta,grupos}. */
+
+/* ── Mi cuenta ── */
+.cfg-container { max-width: 560px; margin: 0 auto; }
+.cfg-titulo h2 { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 4px; }
+.cfg-titulo h2 i { color: #2563eb; }
+.cfg-titulo p { color: #94a3b8; font-size: 13px; margin: 0 0 24px; }
+.cfg-card { background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 20px; overflow: hidden; border: 1.5px solid #e2e8f0; }
+.cfg-card-danger { border-color: #fecaca; }
+.cfg-card-header { display: flex; align-items: center; gap: 16px; padding: 20px 22px; background: linear-gradient(135deg,#eff6ff,#dbeafe); border-bottom: 1px solid #bfdbfe; }
+.cfg-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg,#2563eb,#1d4ed8); color: #fff; font-size: 22px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.cfg-user-name { font-size: 16px; font-weight: 700; color: #0f172a; }
+.cfg-user-sub { font-size: 12px; color: #64748b; margin-top: 3px; }
+.cfg-rol-badge { display: inline-block; background: #dbeafe; color: #1e40af; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; }
+.cfg-section-title { font-size: 13px; font-weight: 700; color: #374151; padding: 16px 22px 0; display: flex; align-items: center; gap: 8px; }
+.cfg-section-title i { color: #2563eb; }
+.cfg-body { padding: 16px 22px 20px; }
+.cfg-campo { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
+.cfg-campo label { font-size: 13px; font-weight: 600; color: #374151; }
+.cfg-campo input { border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 9px 12px; font-size: 14px; background: #f8fafc; font-family: inherit; }
+.cfg-campo input:focus { outline: none; border-color: #2563eb; background: #fff; box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+.cfg-input-eye { position: relative; }
+.cfg-input-eye input { padding-right: 42px; width: 100%; box-sizing: border-box; }
+.cfg-input-eye button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #94a3b8; cursor: pointer; }
+.cfg-btn { display: inline-flex; align-items: center; gap: 8px; border: none; padding: 10px 22px; border-radius: 9px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.cfg-btn:disabled { opacity: .6; cursor: not-allowed; }
+.cfg-btn-primary { background: linear-gradient(135deg,#2563eb,#1d4ed8); color: #fff; }
+.cfg-btn-danger { background: linear-gradient(135deg,#ef4444,#dc2626); color: #fff; }
+.cfg-danger-txt { font-size: 13px; color: #64748b; margin-bottom: 16px; line-height: 1.6; }
+.cfg-msg { display: flex; align-items: center; gap: 8px; margin-top: 14px; padding: 11px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+.cfg-msg-ok { background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+.cfg-msg-err { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+
+/* ── Grupos de acceso ── */
+.ga-wrap { max-width: 1100px; margin: 0 auto; }
+.ga-hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+.ga-hdr-text h2 { margin: 0 0 4px; font-size: 22px; font-weight: 800; color: #0f172a; }
+.ga-hdr-text h2 i { color: #2563eb; }
+.ga-hdr-text p { margin: 0; color: #64748b; font-size: 13.5px; }
+.ga-note { margin: 0 0 20px; padding: 10px 14px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; color: #92400e; font-size: 12px; }
+.ga-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.ga-card { background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 20px; transition: border-color .2s, box-shadow .2s; display: flex; flex-direction: column; }
+.ga-card:hover { border-color: #cbd5e1; box-shadow: 0 4px 16px rgba(0,0,0,.04); }
+.ga-c-title { margin: 0 0 12px; font-size: 16px; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 8px; }
+.ga-badge-sa { font-size: 10px; background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 20px; font-weight: 800; letter-spacing: .5px; }
+.ga-c-desc { font-size: 13px; color: #64748b; line-height: 1.5; flex: 1; margin-bottom: 16px; }
+.ga-c-ftr { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 14px; margin-top: auto; }
+.ga-c-users { font-size: 12px; color: #94a3b8; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.ga-btn-icon { display: inline-flex; align-items: center; gap: 6px; border-radius: 6px; padding: 7px 12px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; cursor: pointer; font-size: 12px; font-weight: 700; transition: all .15s; }
+.ga-btn-icon:hover { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; }
+.ga-empty { text-align: center; padding: 40px; color: #94a3b8; background: #f8fafc; border: 1.5px dashed #cbd5e1; border-radius: 12px; font-size: 14px; }
+
+.ga-modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.6); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 18px; }
+.ga-modal-box { background: #fff; border-radius: 16px; width: 100%; max-width: 720px; box-shadow: 0 20px 40px rgba(0,0,0,.15); display: flex; flex-direction: column; max-height: 88vh; }
+.ga-modal-hdr { padding: 18px 22px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+.ga-modal-hdr h3 { margin: 0; font-size: 17px; font-weight: 700; color: #0f172a; }
+.ga-modal-close { background: none; border: none; font-size: 20px; color: #94a3b8; cursor: pointer; line-height: 1; }
+.ga-modal-close:hover { color: #ef4444; }
+.ga-modal-body { padding: 20px 22px; overflow-y: auto; }
+.perm-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.perm-table th { background: #f8fafc; padding: 10px 12px; text-align: left; border-bottom: 2px solid #e2e8f0; color: #475569; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 11px; }
+.perm-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
+.perm-table td:first-child { font-weight: 600; color: #1e293b; }
+.perm-table tr:hover td { background: #f8fafc; }
+.perm-yes { color: #166534; font-weight: 700; }
+.perm-no { color: #b91c1c; font-weight: 700; }
+
+@media (max-width: 640px) { .ga-hdr { flex-direction: column; align-items: flex-start; gap: 10px; } }

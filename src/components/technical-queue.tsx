@@ -3,21 +3,92 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "@/lib/api";
+import { statusLabels, statusClass, priorityLabels, priorityClass, statusBuckets, bucketLabels } from "@/lib/order-status";
 import "./legacy-order-list.css";
 
 type Order = { id: string; displayNumber: string; branchCode: string; queuePriority: string | null; serviceMode: string | null; status: string; createdAt: string };
 type OrderList = { total: number; items: Order[] };
-const labels: Record<string, string> = { FinalCustomer: "Cliente final", Wholesale: "Mayorista", ExternalCustomer: "Cliente externo", Stock: "Stock", SelfConsumption: "Autoconsumo" };
-const classes: Record<string, string> = { FinalCustomer: "final", Wholesale: "wholesale", ExternalCustomer: "external", Stock: "stock", SelfConsumption: "self" };
 
 export function TechnicalQueue({ assigned = false, heading, queue }: { assigned?: boolean; heading?: string; queue?: string }) {
-  const [orders, setOrders] = useState<Order[]>([]); const [loading, setLoading] = useState(true); const [error, setError] = useState(""); const [claimingId, setClaimingId] = useState<string | null>(null); const [query, setQuery] = useState(""); const [status, setStatus] = useState("");
-  const load = useCallback(async () => { setLoading(true); setError(""); try { const endpoint = assigned ? "/api/orders/my-assigned?pageSize=50" : queue ? `/api/orders/queues/${queue}?pageSize=50` : "/api/orders/technical-queue?pageSize=50"; setOrders((await api<OrderList>(endpoint)).items); } catch (e) { setError(e instanceof ApiError && e.status === 403 ? "Tu perfil no tiene acceso a esta cola." : "No se pudo cargar órdenes. Verifica la conexión con la API."); } finally { setLoading(false); } }, [assigned, queue]);
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [claimingId, setClaimingId] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState("");
+  const [bucket, setBucket] = useState("");
+
+  const load = useCallback(async () => {
+    setLoading(true); setError("");
+    try {
+      const endpoint = assigned ? "/api/orders/my-assigned?pageSize=50" : queue ? `/api/orders/queues/${queue}?pageSize=50` : "/api/orders/technical-queue?pageSize=50";
+      setOrders((await api<OrderList>(endpoint)).items);
+    } catch (e) {
+      setError(e instanceof ApiError && e.status === 403 ? "Tu perfil no tiene acceso a esta cola." : "No se pudo cargar órdenes. Verifica la conexión con la API.");
+    } finally { setLoading(false); }
+  }, [assigned, queue]);
   useEffect(() => { void load(); }, [load]);
-  const visible = useMemo(() => orders.filter((o) => `${o.displayNumber} ${o.branchCode} ${labels[o.queuePriority ?? ""] ?? ""} ${o.status}`.toLowerCase().includes(query.toLowerCase()) && (!status || o.status === status)), [orders, query, status]);
+
+  const visible = useMemo(() => orders.filter((o) => {
+    const text = `${o.displayNumber} ${o.branchCode} ${priorityLabels[o.queuePriority ?? ""] ?? ""} ${statusLabels[o.status] ?? o.status}`.toLowerCase();
+    if (!text.includes(query.toLowerCase())) return false;
+    if (assigned) return !bucket || (statusBuckets[bucket] ?? []).includes(o.status);
+    return !status || o.status === status;
+  }), [orders, query, status, bucket, assigned]);
+
   const statuses = [...new Set(orders.map((o) => o.status))];
-  async function claim(id: string) { setClaimingId(id); setError(""); try { await api(`/api/orders/${id}/claim`, { method: "POST", headers: { "Idempotency-Key": crypto.randomUUID() } }); await load(); } catch (e) { setError(e instanceof ApiError ? e.message : "No fue posible tomar esta orden."); } finally { setClaimingId(null); } }
+  const bucketCount = (key: string) => orders.filter((o) => (statusBuckets[key] ?? []).includes(o.status)).length;
+
+  async function claim(id: string) {
+    setClaimingId(id); setError("");
+    try { await api(`/api/orders/${id}/claim`, { method: "POST", headers: { "Idempotency-Key": crypto.randomUUID() } }); await load(); }
+    catch (e) { setError(e instanceof ApiError ? e.message : "No fue posible tomar esta orden."); }
+    finally { setClaimingId(null); }
+  }
+
   const title = heading ?? (assigned ? "Mis órdenes" : "Órdenes disponibles");
-  const subtitle = assigned ? "Órdenes activas bajo tu responsabilidad técnica." : queue === "documentary-warranty" ? "Garantías pendientes de verificación documental." : queue === "customer-service" ? "Órdenes que requieren cotización y respuesta del cliente." : "Selecciona una orden para iniciar su diagnóstico y reparación.";
-  return <section className="lo-wrap"><header className="lo-head"><div><h2><i className={`bi ${assigned ? "bi-person-check" : queue ? "bi-file-earmark-check" : "bi-inboxes"}`} /> {title}</h2><p>{subtitle}</p></div><button className="lo-refresh" onClick={() => void load()} disabled={loading}><i className="bi bi-arrow-clockwise" /> Actualizar</button></header><div className="lo-kpis"><div><small>Total</small><strong>{orders.length}</strong></div><div><small>Mostrando</small><strong>{visible.length}</strong></div><div><small>En reparación</small><strong>{orders.filter((o) => o.status === "InRepair").length}</strong></div><div><small>En espera</small><strong>{orders.filter((o) => /waiting|standby/i.test(o.status)).length}</strong></div></div><div className="lo-filters"><label><span>Buscar</span><i className="bi bi-search" /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Nro. orden, sucursal o tipo…" /></label><label><span>Estado</span><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">Todos</option>{statuses.map((value) => <option key={value}>{value}</option>)}</select></label><button className="lo-clear" onClick={() => { setQuery(""); setStatus(""); }}><i className="bi bi-x-circle" /> Limpiar</button></div>{error && <p className="lo-error" role="alert">{error}</p>}{loading ? <div className="lo-empty">Cargando órdenes…</div> : visible.length === 0 ? <div className="lo-empty"><i className="bi bi-inbox" />No hay órdenes que coincidan con los filtros.</div> : <div className="lo-grid">{visible.map((o) => <article className="lo-card" key={o.id}><div className="lo-card-top"><strong>{o.displayNumber}</strong><span className="lo-status">{o.status}</span></div><div className="lo-client"><i className="bi bi-building" /> {o.branchCode}</div><div className="lo-service">{o.serviceMode === "Warranty" ? "Validación de garantía" : "Servicio técnico"}</div><div className="lo-meta"><span className={`lo-priority ${classes[o.queuePriority ?? ""] ?? ""}`}>{labels[o.queuePriority ?? ""] ?? "Sin clasificación"}</span><span><i className="bi bi-calendar3" /> {new Date(o.createdAt).toLocaleDateString("es-EC")}</span></div><div className="lo-actions">{assigned || queue ? <Link href={`/operaciones/ordenes/${o.id}`}><i className="bi bi-eye" /> Abrir orden</Link> : <button onClick={() => void claim(o.id)} disabled={claimingId === o.id}>{claimingId === o.id ? "Tomando…" : <><i className="bi bi-hand-index-thumb" /> Tomar orden</>}</button>}</div></article>)}</div>}</section>;
+  const subtitle = assigned ? "Órdenes activas bajo tu responsabilidad técnica."
+    : queue === "documentary-warranty" ? "Garantías pendientes de verificación documental."
+    : queue === "customer-service" ? "Órdenes que requieren cotización y respuesta del cliente."
+    : "Selecciona una orden para iniciar su diagnóstico y reparación.";
+
+  return <section className="lo-wrap">
+    <header className="lo-head">
+      <div><h2><i className={`bi ${assigned ? "bi-person-check" : queue ? "bi-file-earmark-check" : "bi-inboxes"}`} /> {title}</h2><p>{subtitle}</p></div>
+      <button className="lo-refresh" onClick={() => void load()} disabled={loading}><i className="bi bi-arrow-clockwise" /> Actualizar</button>
+    </header>
+
+    {assigned
+      ? <div className="lo-kpis lo-kpis-click">
+          {Object.keys(statusBuckets).map((key) => <button key={key} className={`lo-kpi lo-kpi-${key} ${bucket === key ? "activo" : ""}`} onClick={() => setBucket(bucket === key ? "" : key)}>
+            <strong>{bucketCount(key)}</strong><small>{bucketLabels[key]}</small>
+          </button>)}
+          <button className={`lo-kpi ${bucket === "" ? "activo" : ""}`} onClick={() => setBucket("")}><strong>{orders.length}</strong><small>Total</small></button>
+        </div>
+      : <div className="lo-kpis">
+          <div><small>Total</small><strong>{orders.length}</strong></div>
+          <div><small>Mostrando</small><strong>{visible.length}</strong></div>
+          <div><small>En reparación</small><strong>{orders.filter((o) => o.status === "InRepair").length}</strong></div>
+          <div><small>En espera</small><strong>{orders.filter((o) => /waiting|standby|awaiting|pending/i.test(o.status)).length}</strong></div>
+        </div>}
+
+    <div className="lo-filters">
+      <label><span>Buscar</span><i className="bi bi-search" /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Nro. orden, sucursal o tipo…" /></label>
+      {!assigned && <label><span>Estado</span><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">Todos</option>{statuses.map((value) => <option key={value} value={value}>{statusLabels[value] ?? value}</option>)}</select></label>}
+      <button className="lo-clear" onClick={() => { setQuery(""); setStatus(""); setBucket(""); }}><i className="bi bi-x-circle" /> Limpiar</button>
+    </div>
+
+    {error && <p className="lo-error" role="alert">{error}</p>}
+    {loading ? <div className="lo-empty">Cargando órdenes…</div>
+      : visible.length === 0 ? <div className="lo-empty"><i className="bi bi-inbox" />No hay órdenes que coincidan con los filtros.</div>
+      : <div className="lo-grid">{visible.map((o) => <article className="lo-card" key={o.id}>
+          <div className="lo-card-top"><strong>{o.displayNumber}</strong><span className={`lo-status ${statusClass[o.status] ?? ""}`}>{statusLabels[o.status] ?? o.status}</span></div>
+          <div className="lo-client"><i className="bi bi-building" /> {o.branchCode}</div>
+          <div className="lo-service">{o.serviceMode === "Warranty" ? "Validación de garantía" : "Servicio técnico"}</div>
+          <div className="lo-meta"><span className={`lo-priority ${priorityClass[o.queuePriority ?? ""] ?? ""}`}>{priorityLabels[o.queuePriority ?? ""] ?? "Sin clasificación"}</span><span><i className="bi bi-calendar3" /> {new Date(o.createdAt).toLocaleDateString("es-EC")}</span></div>
+          <div className="lo-actions">{assigned || queue
+            ? <Link href={`/operaciones/ordenes/${o.id}`}><i className="bi bi-eye" /> Abrir orden</Link>
+            : <button onClick={() => void claim(o.id)} disabled={claimingId === o.id}>{claimingId === o.id ? "Tomando…" : <><i className="bi bi-hand-index-thumb" /> Tomar orden</>}</button>}</div>
+        </article>)}</div>}
+  </section>;
 }

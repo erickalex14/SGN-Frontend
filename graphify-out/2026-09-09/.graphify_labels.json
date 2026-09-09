@@ -1,11 +1,11 @@
 {
-  "0": "api",
+  "0": "api.ts",
   "1": "module-page.tsx",
   "2": "compilerOptions",
-  "3": "api.ts",
+  "3": "identity-pages.tsx",
   "4": "package.json",
   "5": "devDependencies",
-  "6": "informes-pages.tsx",
+  "6": "order-detail.tsx",
   "7": "Handoff — SGN Frontend",
   "8": "tecnicos/page.tsx",
   "9": "Q: mira aqui esta un front que han trabajado mi equipo de front, pero le hacen falta cosas, revisa que taal esta, generale el grafo de graphify y veamos como vamos trabajando alli",
@@ -25,6 +25,5 @@
   "23": "next.config.ts",
   "24": "app/page.tsx",
   "25": "CLAUDE.md",
-  "26": "legacy-order-search.tsx",
-  "27": "routes.ts"
+  "26": "legacy-order-search.tsx"
 }

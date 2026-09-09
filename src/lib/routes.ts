@@ -27,6 +27,7 @@ export const routeDefinitions: Record<string, RouteDefinition> = {
   "inventario/marcas": { title: "Marcas y tipos de dispositivo", group: "Inventario" },
   "inventario/repuestos": { title: "Catálogo de repuestos", group: "Inventario" },
   "operaciones/listas-compra": { title: "Listas de compra", group: "Inventario" },
+  "operaciones/inventario-fisico": { title: "Inventario físico ST", group: "Inventario" },
   "directorio/empresas": { title: "Empresas", group: "Directorios" },
   "directorio/cas": { title: "Centros autorizados (CAS)", group: "Directorios" },
   "directorio/sucursales": { title: "Sucursales Novitec", group: "Directorios" },

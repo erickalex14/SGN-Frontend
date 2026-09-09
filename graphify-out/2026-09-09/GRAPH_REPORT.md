@@ -1,11 +1,11 @@
 # Graph Report - SGN-Frontend  (2026-09-09)
 
 ## Corpus Check
-- 44 files · ~55,008 words
+- 43 files · ~54,492 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 302 nodes · 398 edges · 28 communities (24 shown, 4 thin omitted)
+- 295 nodes · 386 edges · 27 communities (23 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -15,13 +15,13 @@
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- api
+- api.ts
 - module-page.tsx
 - compilerOptions
-- api.ts
+- identity-pages.tsx
 - package.json
 - devDependencies
-- informes-pages.tsx
+- order-detail.tsx
 - Handoff — SGN Frontend
 - tecnicos/page.tsx
 - Q: mira aqui esta un front que han trabajado mi equipo de front, pero le hacen falta cosas, revisa que taal esta, generale el grafo de graphify y veamos como vamos trabajando alli
@@ -40,12 +40,11 @@
 - eslint.config.mjs
 - next.config.ts
 - legacy-order-search.tsx
-- routes.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `api()` - 20 edges
-2. `ApiError` - 16 edges
-3. `compilerOptions` - 16 edges
+1. `api()` - 18 edges
+2. `compilerOptions` - 16 edges
+3. `ApiError` - 15 edges
 4. `Handoff — SGN Frontend` - 11 edges
 5. `Matriz de migración legacy → Next` - 11 edges
 6. `getSession()` - 10 edges
@@ -59,8 +58,8 @@
   src/app/login/page.tsx → src/lib/session.ts
 - `LegacyOrderSearch()` --calls--> `api()`  [EXTRACTED]
   src/components/legacy-order-search.tsx → src/lib/api.ts
-- `api()` --calls--> `getAccessToken()`  [EXTRACTED]
-  src/lib/api.ts → src/lib/session.ts
+- `OrderDetail()` --calls--> `getSession()`  [EXTRACTED]
+  src/components/order-detail.tsx → src/lib/session.ts
 - `CatchAllPage()` --calls--> `pageInfo()`  [EXTRACTED]
   src/app/(workspace)/[...segments]/page.tsx → src/lib/routes.ts
 - `AppShell()` --calls--> `getSession()`  [EXTRACTED]
@@ -69,23 +68,23 @@
 ## Import Cycles
 - None detected.
 
-## Communities (28 total, 4 thin omitted)
+## Communities (27 total, 4 thin omitted)
 
-### Community 0 - "api"
-Cohesion: 0.10
-Nodes (19): Branch, Brand, InventoryBrands(), PhysicalInventory(), PhysItem, statusClass, useList(), Branch (+11 more)
+### Community 0 - "api.ts"
+Cohesion: 0.08
+Nodes (28): Branch, Brand, InventoryBrands(), PhysicalInventory(), PhysItem, statusClass, useList(), Branch (+20 more)
 
 ### Community 1 - "module-page.tsx"
-Cohesion: 0.07
-Nodes (30): Branch, casTypeLabels, Company, DirectoryBranches(), DirectoryCompanies(), DirectoryServiceCenters(), Field, ServiceCenter (+22 more)
+Cohesion: 0.11
+Nodes (19): CatchAllPage(), Branch, casTypeLabels, Company, DirectoryBranches(), DirectoryCompanies(), DirectoryServiceCenters(), Field (+11 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.07
 Nodes (28): dom, dom.iterable, esnext, **/*.mts, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules (+20 more)
 
-### Community 3 - "api.ts"
-Cohesion: 0.11
-Nodes (21): LoginPage(), AppShell(), Group, groups, Item, cards, LegacyDashboard(), Order (+13 more)
+### Community 3 - "identity-pages.tsx"
+Cohesion: 0.12
+Nodes (16): LoginPage(), AppShell(), Group, groups, Item, Account, Msg, Profile (+8 more)
 
 ### Community 4 - "package.json"
 Cohesion: 0.12
@@ -95,9 +94,9 @@ Nodes (15): next, dependencies, next, react, react-dom, name, private, scripts (
 Cohesion: 0.13
 Nodes (15): babel-plugin-react-compiler, eslint, eslint-config-next, devDependencies, babel-plugin-react-compiler, eslint, eslint-config-next, @types/node (+7 more)
 
-### Community 6 - "informes-pages.tsx"
-Cohesion: 0.22
-Nodes (8): conditionClass, equipmentConditions, OrderLookup, Report, ReportCreate(), ReportItem, ReportList, ReportsList()
+### Community 6 - "order-detail.tsx"
+Cohesion: 0.12
+Nodes (15): conditionClass, equipmentConditions, OrderLookup, Report, ReportCreate(), ReportItem, ReportList, ReportsList() (+7 more)
 
 ### Community 7 - "Handoff — SGN Frontend"
 Cohesion: 0.08
@@ -155,29 +154,25 @@ Nodes (4): Ejecutar, Estructura, Integración requerida con Laravel, SGN Fronten
 Cohesion: 0.12
 Nodes (24): AssignedOverview(), cargaColor(), Customer, Group, OrderItem, Overview, Branch, CurrentOrder (+16 more)
 
-### Community 27 - "routes.ts"
-Cohesion: 0.32
-Nodes (6): CatchAllPage(), ModulePage(), pageInfo(), PageKind, RouteDefinition, routeDefinitions
-
 ## Knowledge Gaps
-- **167 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+162 more)
+- **162 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+157 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `api()` connect `api` to `module-page.tsx`, `legacy-order-search.tsx`, `api.ts`, `informes-pages.tsx`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
-- **Why does `ApiError` connect `module-page.tsx` to `api`, `legacy-order-search.tsx`, `api.ts`, `informes-pages.tsx`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `api()` connect `api.ts` to `module-page.tsx`, `legacy-order-search.tsx`, `identity-pages.tsx`, `order-detail.tsx`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `ApiError` connect `api.ts` to `module-page.tsx`, `legacy-order-search.tsx`, `identity-pages.tsx`, `order-detail.tsx`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `getSession()` connect `identity-pages.tsx` to `api.ts`, `order-detail.tsx`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _167 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `api` be split into smaller, more focused modules?**
-  _Cohesion score 0.09666666666666666 - nodes in this community are weakly interconnected._
+  _162 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `api.ts` be split into smaller, more focused modules?**
+  _Cohesion score 0.07539118065433854 - nodes in this community are weakly interconnected._
 - **Should `module-page.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06707317073170732 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10541310541310542 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Should `api.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.1053763440860215 - nodes in this community are weakly interconnected._
